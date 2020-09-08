@@ -2,7 +2,7 @@
 
 * Студент: [Nikolay Usov](https://up.htmlacademy.ru/htmlcss/29/user/1493681).
 * Наставник: [Алексей Хабиров] (https://htmlacademy.ru/profile/alex_khab).
-
+Progect: nerds 
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
