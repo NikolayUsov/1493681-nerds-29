@@ -3,10 +3,13 @@
    top: -9999px;
    left: -9999px;
 }
-.static-table{
+.static{
 border: none;
 
 }
 .our-clients ul{
+    list-style: none;
+}
+.catalog_sort,.catalog_items{
     list-style: none;
 }
