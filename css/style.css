@@ -3,13 +3,15 @@
    top: -9999px;
    left: -9999px;
 }
+
 .static{
 border: none;
-
 }
+
 .our-clients ul{
     list-style: none;
 }
-.catalog_sort,.catalog_items{
+
+.catalog-sort,.catalog-items{
     list-style: none;
 }
