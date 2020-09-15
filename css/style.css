@@ -1,17 +1,326 @@
+/* Variables */
+:root {
+  --basic-black: #000000;
+  --basic-extra-dark: #283136;
+  --basic-light-dark: #444444;
+  --basic-black-darken:#666;
+
+  --basic-grey: #EEEEEE;
+  --basic-dark-grey:#DFDFDF;
+  --basic-extra-grey: #D5D5D5;
+
+  --basic-white: #ffffff;
+
+  --spicial-black-opacity:rgba(0, 1, 1, 0.1);
+  --special-red:#FB565A;
+  --special-dark-red:#E74246;
+  --special-extra-red:#D7373B;
+
+  --special-yellow:#EFC84A;;
+  --special-dark-yellow:#EAB534;;
+  --special-extra-yellow:#E5A722;
+
+  --special-green:#00CA74;
+  --special-dark-green:#00BC6C;
+  --special-extra-green:#00AA62;
+  
+}        
+/* Basic-style */
+
+.page-body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight:normal;
+    color: var(--basic-extra-dark);
+    background-color: var(--basic-white);
+    margin: 0px;
+    padding: 0px;
+
+}
+
+a{
+    text-decoration:none;
+}
+/* position-style */
+
+.wrapper{
+    width: 1157px;
+    margin: 0 auto;
+}
+
 .hidden{
    position: absolute;
    top: -9999px;
    left: -9999px;
 }
 
+/* style-btn and btn-active */
+
+.btn{
+    display: inline-block;
+    text-align: center;
+    padding: 17px 54px 15px;
+    border-radius: 3px;
+    color:var(--basic-white);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+.btn-learn-more{
+    background: var(--special-red);
+}
+
+.btn-learn-more:hover{
+    background-color: var(--special-dark-red);
+}
+
+.btn-learn-more:active{
+    background:var(--special-extra-red);
+    box-shadow: inset 0px 3px 0px var(--spicial-black-opacity);
+}
+
+/* style-btn and btn-active кнопки секции сервис */
+
+.btn-order-web{
+    background: var(--special-red);
+}
+
+.btn-order-web:hover{
+    background-color: var(--special-dark-red);
+}
+
+.btn-order-web:active{
+    background:var(--special-extra-red);
+    box-shadow: inset 0px 3px 0px var(--spicial-black-opacity);
+}
+
+.btn-order-app{
+    background: var(--special-green);
+}
+
+.btn-order-app:hover{
+    background-color: var(--special-dark-green);
+}
+
+.btn-order-web:active{
+    background:var(--special-extra-green);
+    box-shadow: inset 0px 3px 0px var(--spicial-black-opacity);
+}
+
+.btn-order-presentation{
+    background: var(--special-yellow);
+}
+
+.btn-order-presentation:hover{
+    background-color: var(--special-dark-yellow);
+}
+
+.btn-order-presentation:active{
+    background:var(--special-extra-yellow);
+    box-shadow: inset 0px 3px 0px var(--spicial-black-opacity);
+}
+
+/* style-btn and btn-active кнопки секции котнакты */
+
+.btn-write-us{
+    background: var(--special-red);
+}
+.btn-write-us:hover{
+    background-color: var(--special-dark-red);
+}
+
+.btn-write-us:active{
+    background:var(--special-extra-red);
+    box-shadow: inset 0px 3px 0px var(--spicial-black-opacity);
+}
+
+/* style */
+/* header-style */
+
+.main-header{
+    background-color: var(--basic-grey);
+    margin: 0;
+}
+
+.main-header .main-nav{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cart,.main-nav-item a{
+    color: var(--basic-black);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    text-transform: uppercase;
+
+}
+
+/* promo-style */
+
+.promo{
+    background-color: var(--basic-grey);
+    padding: 15px 0px;
+}
+
+.promo .promo-title{
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 55px;
+    color: var(--basic-black);
+}
+
+/* service-style */
+
+.service-title{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: var(--basic-black);
+
+}
+
+.service-list{
+    list-style: none;
+    padding: 0px;
+}
+
+.service-list-item{
+    width: 300px;
+}
+
+/* about-us-style */
+
+.about-us{
+    padding: 73px 0 71px 0px;
+    border-bottom: 1px solid var(--basic-grey) ;
+    border-top: 1px solid var(--basic-grey) ;
+}
+.about-us-title{
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 45px;
+}
+
+.about-us-subtitle{
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--basic-black);
+}
+
+
 .static{
 border: none;
 }
+.static th{
+    color: var(--basic-black);
+    font-size: 45px;
+    line-height: 64px;
+    text-align: left;
+    font-weight: bold;
+}
 
-.our-clients ul{
+th sup{
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 40px;
+    color: inherit;
+}
+.static td{
+    line-height: 18px;
+}
+
+/* our-clients-style */
+.our-clients{
+    margin-bottom: 80px;;
+    padding: 53px 0 44px 0;
+    border-bottom: 1px solid var(--basic-grey);
+}
+.our-clients-list{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.our-clients-item{
+    opacity: 0.2;   
+}
+
+.our-clients-item:hover{
+    opacity: 1;   
+}
+
+.our-clients-item:active{
+    opacity: 0.2;   
+}
+/* our-clients-grid */
+
+.our-clients-list{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+/* footer-contacts-style */
+
+.footer-contacts{
+    width:318px;
+}
+
+.footer-contacts footer-title{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+.footer-contacts .footer-addres{
+    line-height: 18px;
+    color: var(--basic-black-darken);
+}
+.footer-addres a{
+    color:inherit;
+    line-height: inherit;
+    
+}
+
+.footer-social-title{
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 36px;
+    text-align: center;
+    color: var(--basic-black);
+}
+.footer-social{
+font-size: 16px;
+line-height: 22px;
+color: var(--basic-light-dark);
+text-align: center;
+}
+.social-links{
     list-style: none;
 }
 
-.catalog-sort,.catalog-items{
-    list-style: none;
+.social-link-item{
+    display: inline-block;
 }
+.social-btn{
+    display: inline-block;
+    width: 81px;
+    height: 81px;
+    border-radius:50%;
+    font-size: 0px;
+    background: linear-gradient(0deg, #E1E1E1, #E1E1E1), #FFFFFF;
+    
+}
+/*  .social-vk{
+    background-image: url('/img/vk-icon.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+}
+*/

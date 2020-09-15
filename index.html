@@ -1,82 +1,88 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
-  <body>
-    <header class="header">
-      <nav class="header-nav">
-        <a href="#"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип магазина Nerds"></a>
-        <ul>
-          <li class="main-nav-item"><a href="#">Студия</a></li>
-          <li class="main-nav-item"><a href="#">Клиенты</a></li>
-          <li class="main-nav-item"><a href="catalog.html">Магазин</a></li>
-          <li class="main-nav-item"><a href="#">Контакты</a></li>
-        </ul>
-        <a href="#" class="btn bth-buy-list">Корзина</a>
-      </nav>
-      
+  <body class="page-body">
+    <header class="main-header">
+      <div class="wrapper">
+        <nav class="header-nav">
+          <a class="header-logo" href="#">
+            <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип магазина Nerds">
+          </a>
+          <ul class="main-nav">
+            <li class="main-nav-item"><a href="#">Студия</a></li>
+            <li class="main-nav-item"><a href="#">Клиенты</a></li>
+            <li class="main-nav-item"><a href="catalog.html">Магазин</a></li>
+            <li class="main-nav-item"><a href="#">Контакты</a></li>
+          </ul>
+          <a class="cart" href="#" class="btn bth-buy-list">Корзина</a>
+        </nav>
+      </div>
     </header>
 
-    <main>
+    <main >
+     
+      <h1 class="hidden">Дизайн студия Nerds</h1>
 
-    <h1 class="hidden">Дизайн студия Nerds</h1>
+      <section class="promo">
+        <div class="wrapper">
+          <h2 class="hidden">Описание студии Nerds</h2>
+          <p class="promo-title">Долго, дорого,скрупулезно.</p>
+          <p>Математически выверенный дизайн <br>
+          для вашего сайта или мобильного приложения.</p>
+          <a class="btn btn-learn-more" href="catalog.html">Узнать больше</a>
+        </div>   
+      </section>
 
-    <section class="promo">
-      <h2 class="hidden">Описание студии Nerds</h2>
-      <p>Долго, дорого,скрупулезно.</p>
-      <p>Математически выверенный дизайн <br>
-      для вашего сайта или мобильного приложения.</p>
-      <a href="catalog.html" class="btn btn-about">Узнать больше</a>
-    </section>
-
-    <section class="service">
+    <section class="service wrapper">
       <h2 class="hidden">Услуги студии Nerds</h2>
-      <ul>
-        <li>
+      <ul class="service-list">
+        <li class="service-list-item">
           <img src="img/web-site.jpg" width="300" height="146" alt="web-сайты">
-          <h3>Веб-сайты</h3>
+          <h3 class="service-title">Веб-сайты</h3>
           <p>Мир никогда не будет прежним после того как увидит ваш сайт!
-          <button type="button">Заказать</button>
+          <a class="btn btn-order-web">Заказать</a>
           </p>
         </li>
-        <li>
+        <li class="service-list-item">
           <img src="img/app.png" width="300" height="146" alt="Мобильные приложения">
-          <h3>Приложения</h3>
+          <h3 class="service-title">Приложения</h3>
           <p>Покорите топ-10 приложений в AppStore и Google Play
-          <button type="button">Заказать</button>
+          <a class="btn btn-order-app">Заказать</a>
           </p>
         </li>
-        <li>
+        <li class="service-list-item">
           <img src="img/presentation.png" width="300" height="146" alt="Презентации">
-          <h3>Презентации</h3>
+          <h3 class="service-title">Презентации</h3>
           <p>Вы даже не подозреваете,насколько вы изумительны!
-          <button type="button">Заказать</button>
+          <a class="btn btn-order-presentation">Заказать</a>
           </p>
         </li>
       </ul>
     </section>
 
-    <section class="about-us">
+    <section class="about-us  wrapper">
       <h2 class="hidden">Информаия о студии Nerds</h2> 
 
-        <p>Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
+        <p class="about-us-title">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
         <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
-        <p>Выполняем заказы на разработку:</p>
-         <ul>
-            <li>Веб-сайтов любой сложности</li>
-            <li>Мобильных приложений для iOS и Android</li>
-            <li>Слайдшоу и видео для корпоративных презентаций</li>
+        <p class="about-us-subtitle">Выполняем заказы на разработку:</p>
+         <ul class="product-list">
+            <li class="product-list-item">Веб-сайтов любой сложности</li>
+            <li class="product-list-item">Мобильных приложений для iOS и Android</li>
+            <li class="product-list-item">Слайдшоу и видео для корпоративных презентаций</li>
           </ul> 
         <img src="img/nerds-illustration.png" width="360" height="280" alt="Логотип">
-        <p>с 2004 года Любим точность во всем:</p>
+        <p class="about-us-subtitle">С 2004 года Любим точность во всем:</p>
         <table class="static">
           <tr>
-            <th>146%</th>
-            <th>100%</th>
-            <th>50%</th>
+            <th>146<sup>%</sup></th>
+            <th>100<sup>%</sup></th>
+            <th>50<sup>%</sup></th>
           </tr>
           <tr>
             <td>Уровень самоотдачи</td>
@@ -86,49 +92,49 @@
         </table>
     </section>
 
-    <section class="our-clients">
+    <section class="our-clients wrapper">
       <h2 class="hidden">Клиенты студии Nerds</h2>
-      <ul>
-        <li>
+      <ul class="our-clients-list">
+        <li class="our-clients-item">
           <a href="https://htmlacademy.ru/intensive/htmlcss">
-            <img src="img/html-academy-logo.svg" width="199" height="67" alt="Логотип HTML-Academy">
+            <img src="img/html-logo.png" width="199" height="67" alt="Логотип HTML-Academy">
           </a>
         </li>
-        <li>
+        <li class="our-clients-item">
           <a href="#">
-            <img src="img/boroditsky-logo.svg" width="209" height="90" alt="Логотип барбершопа">
+            <img src="img/borodinsky-logo.png" width="209" height="90" alt="Логотип барбершопа">
           </a>
         </li>
-        <li>
+        <li class="our-clients-item">
           <a href="#">
-            <img src="img/pink-logo.svg" width="185" height="52" alt="Логотп pink">
+            <img src="img/pink-logo.png" width="185" height="52" alt="Логотп pink">
           </a>
         </li>
-        <li>
+        <li class="our-clients-item">
           <a href="#">
-            <img src="img/mishka-logo.svg" width="173" height="84" alt="Логотип Mishka">
+            <img src="img/mishka-logo.png" width="173" height="84" alt="Логотип Mishka">
           </a>
         </li>
       </ul>
     </section>
   </main>
 
-    <footer class="footer">
-      <section class="our-contact">
+    <footer class="footer wrapper">
+      <section class="footer-contacts">
         <h2 class="hidden">Контакты дизайн-студии Nerds</h2>
-        <h3>NЁRDS DESIGN STUDIO</h3>
-        <p>191186, Санкт-Петербург,
-        ул. Б. Конюшенная, д. 19/8
-        <a href="tel:+78122757575"> тел. +7 (812) 275-75-75</a></p>
+        <h3 class="footer-title">NЁRDS DESIGN STUDIO</h3>
+        <p class="footer-addres">191186, Санкт-Петербург,
+        ул. Б. Конюшенная, д. 19/8<br>
+        <a href="tel:+78122757575"> тел.+7(812)275-75-75</a></p>
+        <a class="btn btn-write-us"href="#">Напишите нам</a>
       </section>
-      <section class="social">
-        <h2 class="hidden">Социальные сети дизайн студии Nerds</h2>
-        <p>Давайте дружить, это выгодно!</p>
-        <p>Скидка 10% для друзей из социальных сетей.</p>
+      <section class="footer-social">
+        <h2 class="footer-social-title">Давайте дружить, это выгодно!</h2>
+        <p>Скидка 10<sup></sup>% для друзей из социальных сетей.</p>
         <ul class="social-links">
-          <li><a href="#">Вконтакте</a></li>
-          <li><a href="#">Фейсбук</a></li>
-          <li><a href="#">Инстаграм</a></li>
+          <li class="social-link-item"><a class="social-btn social-vk"href="#">Вконтакте</a></li>
+          <li class="social-link-item"><a class="social-btn social-fb"href="#">Фейсбук</a></li>
+          <li class="social-link-item"><a  class="social-btn social-inst"href="#">Инстаграм</a></li>
         </ul>
       </section>
     </footer>
