@@ -132,12 +132,41 @@
         <h2 class="footer-social-title">Давайте дружить, это выгодно!</h2>
         <p>Скидка 10<sup></sup>% для друзей из социальных сетей.</p>
         <ul class="social-links">
-          <li class="social-link-item"><a class="social-btn social-vk"href="#">Вконтакте</a></li>
-          <li class="social-link-item"><a class="social-btn social-fb"href="#">Фейсбук</a></li>
-          <li class="social-link-item"><a  class="social-btn social-inst"href="#">Инстаграм</a></li>
+          <li class="social-link-item">
+            <a class="social-btn social-vk"href="#">Вконтакте</a>
+          </li>
+          <li class="social-link-item">
+            <a class="social-btn social-fb"href="#">Фейсбук</a>
+          </li>
+          <li class="social-link-item">
+            <a  class="social-btn social-inst"href="#">Инстаграм</a>
+          </li>
         </ul>
       </section>
     </footer>
 
+    <div class="wrapper">
+      <section class="modal">
+        <h2 class="modal-title">Личный кабинет</h2>
+        <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="form-group">
+            <label class="" for="name">Ваше имя</label>
+            <input class="" id="name" type="text" name="login" placeholder="Имя Фамилия">  
+          </div>
+          <div class="form-group">
+            <label class="" for="email">Ваш e-mail</label>
+            <input class="" id="email" type="email" name="login" placeholder="email@example.com">  
+          </div>
+          <div class="form-group">
+            <label class="" for="message">Текст письма:</label>
+            <textarea class="" id="message" name="message"  type="text">В свободной форме</textarea>  
+          </div>
+          <div class="form-group">
+            <button class="btn btn-submit-form" type="submit">Отправить</button>
+          </div> 
+        </form>
+        <button type="button">Закрыть</button>
+      </section>  
+    </div>     
   </body>
 </html>
