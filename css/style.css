@@ -104,7 +104,7 @@ a{
     opacity: 0.3;
 }
 
-.btn-sort{}
+
 /* style-btn and btn-active кнопки секции сервис */
 
 
@@ -438,6 +438,7 @@ th sup{
 
 .pagination{
     list-style: none;
+    padding:0;
 }
 .pagination-item{
     display: inline-block;
@@ -495,4 +496,19 @@ th sup{
     line-height: 18px;
     margin: 0;
     padding: 0;
+}
+.catalog-sort{
+    list-style: none;
+}
+.catalog-sort-item a{
+    color: var(--basic-black);
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+.subtitle-catalog-sort{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
 }
