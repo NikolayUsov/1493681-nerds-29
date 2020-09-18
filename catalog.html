@@ -1,102 +1,166 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Каталог товаров Нёрдс</title>
+    <title>HTML Academy: Нёрдс</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
-  <body>
-    <header class="header">
-      <nav class="header-nav">
-        <a href="/index.html"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип магазина Nerds"></a>
-        <ul>
-          <li class="main-nav-item"><a href="#">Студия</a></li>
-          <li class="main-nav-item"><a href="#">Клиенты</a></li>
-          <li class="main-nav-item"><a href="catalog.html">Магазин</a></li>
-          <li class="main-nav-item"><a href="#">Контакты</a></li>
-        </ul>
-        <a href="#" class="btn bth-buy-list">Корзина</a>
-      </nav>
-      
+  <body class="page-body page-inner">
+    <header class="main-header">
+      <div class="wrapper">
+        <nav class="header-nav">
+          <a class="header-logo" href="index.html">
+            <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип магазина Nerds">
+          </a>
+          <ul class="main-nav">
+            <li class="main-nav-item"><a href="#">Студия</a></li>
+            <li class="main-nav-item"><a href="#">Клиенты</a></li>
+            <li class="main-nav-item"><a href="catalog.html">Магазин</a></li>
+            <li class="main-nav-item"><a href="#">Контакты</a></li>
+          </ul>
+          <a class="cart" href="#" class="btn bth-buy-list">Корзина</a>
+        </nav>
+        <h1 class="catalog-title">Магазин готовых шаблонов</h1>
+      </div>
     </header>
-      
-    <main>
-      <h1>Магазин готовых шаблонов</h1>
+    <main class="catalog_main">
 
-      <section class="filter-form">
+      <section class="catalog-filter-form wrapper">
         <h2 class="hidden">Фильтр товаров</h2>
-        <!-- Здесь будет форма фильтра -->
+        <form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
+          <fieldset>
+            <legend>Стоимость:</legend>
+
+          </fieldset> 
+          <fieldset>
+            <legend>Сетка:</legend>
+              <ul class="filter-form-list">
+                <li class="filter-option filter-radio">
+                  <input class="filter-input-radio filter-input" type="radio" name="setka" value="adaptiv" id="adaptiv">
+                  <label for="adaptiv"> Адаптивная</label>
+                </li>
+                <li class="filter-option filter-radio">
+                  <input class="filter-input-radio filter-input" type="radio" name="setka" value="fix" id="fix">
+                  <label for="fix">Фиксированная</label>
+                </li>
+                <li class="filter-option filter-radio">
+                  <input class="filter-input-radio filter-input" type="radio" name="setka" value="rezinovya" id="rezinovya">
+                  <label for="rezinovya">Резиновая</label>
+                </li>
+              </ul>  
+          </fieldset> 
+          <fieldset>
+            <legend>Особенности:</legend>
+            <ul class="filter-form-list">
+              <li class="filter-option">
+                <input class="filter-input-checkbox filter-input" type="checkbox" name="slider" id="slider">
+                <label for="slider">Слайдер</label>
+              </li>
+              <li class="filter-option">
+                <input class="filter-input-checkbox filter-input" type="checkbox" name="advantage-block" id="advantage-block">
+                <label for="advantage-block">Блок преимуществ</label>
+              </li>
+              <li class="filter-option">
+                <input class="filter-input-checkbox filter-input" type="checkbox" name="News" id="News">
+                <label for="News">Новости</label>
+              </li>
+              <li class="filter-option">
+                <input class="filter-input-checkbox filter-input" type="checkbox" name="Gallery" id="Gallery">
+                <label for="Gallery">Галерея</label>
+              </li>
+              <li class="filter-option">
+                <input class="filter-input-checkbox filter-input" type="checkbox" name="cart" id="cart">
+                <label for="cart">Корзина</label>
+              </li>
+            </ul>
+          </fieldset> 
+          <button class="btn btn-secondary" type="submit">Показать</button>
+        </form> 
+
       </section>
       
-      <section class="catalog">
+      <section class="catalog wrapper">
         <h2 class="hidden">Каталог товаров web-студии Nerds</h2>
         <p>Сортировать:</p>
         <ul class="catalog-sort">
           <li>
-            <a href="" class="btn btn-sort">По цене</a>
+            <a href="" class="btn-sort">По цене</a>
           </li>
           <li>
-            <a href="" class="btn btn-sort">По типу</a>
+            <a href="" class="btn-sort">По типу</a>
           </li>
           <li>
-            <a href="" class="btn btn-sort">По названию</a>
+            <a href="" class="btn-sort">По названию</a>
           </li>
         </ul>
-        <ul class="catalog-items">  
+        <ul class="catalog-list">  
           <li class="catalog-item">
                 <a href="#">
                   <img src="img/sedona.jpg" width="358" height="578" alt="Седона">
                 </a>
-                <h3>Седона</h3>
-                <p>Информационный сайт для туристов</p>
-               <a href="" class="btnbtn-price">9900</a>
+                <div class="product-info overlay">
+                  <h3>Седона</h3>
+                  <p>Информационный сайт для туристов</p>
+                 <a href="" class="btn btn-primary">9900</a>
+                </div>
             </li>
           <li class="catalog-item">
               <a href="#">
                 <img src="img/mask.jpg" width="358" height="578" alt="PINK APP">
               </a>
-              <h3>PINK App</h3>
-              <p>Продуктовый лендинг приложения для iOS и Android</p>
-             <a href="" class="btnbtn-price">9900</a>
+              <div class="product-info overlay">
+                <h3>PINK App</h3>
+                <p>Продуктовый лендинг приложения для iOS и Android</p>
+                <a href="" class="btn btn-primary">9900</a>
+              </div>
            </li>  
           <li class="catalog-item">
             <a href="#">
               <img src="img/borodinsky.jpg" width="358" height="578" alt="">
             </a>
-            <h3>Barbershop</h3>
-            <p>Сайт салона красоты.Для мужчин, да.</p>
-           <a href="" class="btnbtn-price">9900</a>
+            <div class="product-info overlay">
+              <h3>Barbershop</h3>
+              <p>Сайт салона красоты.Для мужчин, да.</p>
+              <a href="" class="btn btn-primary">9900</a>
+            </div>
           </li> 
           <li class="catalog-item">
             <a href="#">
               <img src="img/ochkarik.jpg" width="358" height="578" alt="Mishka">
             </a>
-            <h3>Mishka</h3>
-            <p>Интернет-магазин вязаных игрушек</p>
-           <a href="" class="btnbtn-price">9900</a>
+            <div class="product-info overlay">
+              <h3>Mishka</h3>
+              <p>Интернет-магазин вязаных игрушек</p>
+              <a href="" class="btn btn-primary">9900</a>
+            </div>
           </li>
           <li class="catalog-item">
             <a href="#">
               <img src="img/education.jpg" width="358" height="578" alt="A Plus">
             </a>
-            <h3>A Plus</h3>
-            <p>Лендинг курсов повышения квалификации</p>
-         <a href="" class="btnbtn-price">9900</a>
+            <div class="product-info overlay">
+              <h3>A Plus</h3>
+              <p>Лендинг курсов повышения квалификации</p>
+              <a href="" class="btn btn-primary">9900</a>
+            </div>
           </li>  
           <li class="catalog-item">
             <a href="#">
               <img src="img/kvast.jpg" width="358" height="578" alt="Kvast-shop">
             </a>
-            <h3>Кваст</h3>
-            <p>Промо-сайт производителя крафтового кваса</p>
-           <a href="" class="btnbtn-price">9900</a>
+            <div class="product-info overlay">
+              <h3>Кваст</h3>
+              <p>Промо-сайт производителя крафтового кваса</p>
+              <a href="" class="btn btn-primary">9900</a>
+            </div>
       </li> 
 
         </ul>
         
         <ul class="pagination">
           <li class="pagination-item">
-            <a href="">1</a>
+            <a href="" class="active">1</a>
           </li>
           <li class="pagination-item">
              <a href="#">2</a>
@@ -111,22 +175,28 @@
       </section>
     </main>
 
-    <footer class="footer">
-      <section class="our-contact">
+    <footer class="footer wrapper">
+      <section class="footer-contacts">
         <h2 class="hidden">Контакты дизайн-студии Nerds</h2>
-        <h3>NЁRDS DESIGN STUDIO</h3>
-        <p>191186, Санкт-Петербург, 
-        ул. Б. Конюшенная, д. 19/8
-        <a href="tel:+78122757575"> тел. +7 (812) 275-75-75</a></p>
+        <h3 class="footer-title">NЁRDS DESIGN STUDIO</h3>
+        <p class="footer-addres">191186, Санкт-Петербург,
+        ул. Б. Конюшенная, д. 19/8<br>
+        <a href="tel:+78122757575"> тел.+7(812)275-75-75</a></p>
+        <a class="btn btn-primary"href="#">Напишите нам</a>
       </section>
-      <section class="social">
-        <h2 class="hidden">Социальные сети дизайн студии Nerds</h2>
-        <p>Давайте дружить, это выгодно!</p>
-        <p>Скидка 10% для друзей из социальных сетей.</p>
+      <section class="footer-social">
+        <h2 class="footer-social-title">Давайте дружить, это выгодно!</h2>
+        <p>Скидка 10<sup></sup>% для друзей из социальных сетей.</p>
         <ul class="social-links">
-          <li><a href="#">Вконтакте</a></li>
-          <li><a href="#">Фейсбук</a></li>
-          <li><a href="#">Инстаграм</a></li>
+          <li class="social-link-item">
+            <a class="social-btn social-vk"href="#">Вконтакте</a>
+          </li>
+          <li class="social-link-item">
+            <a class="social-btn social-fb"href="#">Фейсбук</a>
+          </li>
+          <li class="social-link-item">
+            <a  class="social-btn social-inst"href="#">Инстаграм</a>
+          </li>
         </ul>
       </section>
     </footer>

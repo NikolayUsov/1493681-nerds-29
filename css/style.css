@@ -29,6 +29,7 @@
   --special-form-border-hover: #B4B9BB;
   --special-form-border-error: #E74246;
   --special-social--inactiv: #E1E1E1;
+  --special-pagination-border:#DBDBDB;
 }
 /* Basic-style */
 
@@ -76,6 +77,7 @@ a{
 
 .btn-primary{
     background-color: var(--special-red);
+    text-transform: uppercase;
 }
 
 .btn-primary:hover{
@@ -87,6 +89,22 @@ a{
     box-shadow: inset 0 3px 0 var(--spicial-black-opacity);
 }
 
+.btn-secondary{
+    background-color:var(--basic-grey);
+    color:var(--basic-black);
+}
+
+.btn-secondary:hover{
+    background-color: var(--basic-dark-grey);
+}
+
+.btn-secondary:active{
+    background-color: var(--basic-extra-grey);
+    box-shadow: inset 0 3px 0 var(--spicial-black-opacity);
+    opacity: 0.3;
+}
+
+.btn-sort{}
 /* style-btn and btn-active кнопки секции сервис */
 
 
@@ -374,4 +392,107 @@ th sup{
 
 .form-group input[type="email"]:invalid{
     border-color: var(--special-dark-red);
+}
+
+
+/* стили каталога */
+
+.catalog-title{
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 55px;
+    padding: 15px 0 108px 0;
+    margin: 0;
+    color: var(--basic-black);
+    text-align: center;
+}
+
+.catalog_main{
+    padding: 55px 0px;
+}
+
+.filter-form fieldset{
+    border: none;
+}
+
+.filter-form legend{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+    color: var(--basic-black);
+}
+
+.filter-form-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--basic-extra-dark);
+}
+
+.filter-option{
+    margin-bottom: 5px;
+}
+
+.pagination{
+    list-style: none;
+}
+.pagination-item{
+    display: inline-block;
+    margin-right: 11px;  
+}
+
+.pagination-item a{
+    display: inline-block;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--basic-black);
+    text-transform: uppercase;
+    padding: 17px 20px 15px 20px;
+    border: 3px solid var(--special-pagination-border);
+    border-radius: 3px;
+    background-color: var(--basic-grey);
+}
+
+.pagination-item .active{
+     background-color: transparent;
+}
+
+.pagination-item:last-child a{
+    padding-right: 78px;
+    padding-left: 78px; 
+}
+
+.catalog-list{
+    list-style: none;
+    padding:0px;
+}
+.catalog-item{
+    width: 358px;
+    padding: 0;
+}
+
+.product-info{
+    background-color: var(--basic-grey);
+    padding: 26px 53px 44px 53px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-info h3{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+    color: var(--basic-black);
+    margin: 0;
+    padding: 0;
+}
+.product-info p{
+    line-height: 18px;
+    margin: 0;
+    padding: 0;
 }
