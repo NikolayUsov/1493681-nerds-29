@@ -168,6 +168,7 @@ img{
     display: inline-block;
     position: relative;
 }
+
 .cart::before{
     content: "";
     width: 15px;
@@ -343,15 +344,15 @@ th sup{
  
 }
 .social-vk{
-    background-image: url("../img/vk-icon.png");  
+    background-image: url("../img/vk-icon.svg");  
 }
 
 .social-fb{
-    background-image: url("../img/fb-icon.png");  
+    background-image: url("../img/fb-icon.svg");  
 }
 
 .social-inst{
-    background-image: url("../img/insta-icon.png");  
+    background-image: url("../img/insta-icon.svg");  
 }
 
 .social-btn:hover{
@@ -366,7 +367,6 @@ th sup{
 
 .modal{
     width: 960px;
-    box-sizing: border-box;
     padding: 63px 99px 84px 100px;
     margin: 15px 0;
     background-color: var(--basic-white);
