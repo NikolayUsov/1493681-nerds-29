@@ -19,7 +19,7 @@
             <li class="main-nav-item"><a href="catalog.html">Магазин</a></li>
             <li class="main-nav-item"><a href="#">Контакты</a></li>
           </ul>
-          <a class="cart" href="#">Корзина</a>
+          <a class="cart" href="#">Корзина</a>  
         </nav>
       </div>
     </header>
@@ -30,14 +30,18 @@
 
       <section class="promo">
         <div class="wrapper">
-          <div class="promo-logo">
-            <img src="img/nerds-index-slide1 1.png" width="760" height="431" alt="">
-          </div>
-          <h2 class="hidden">Описание студии Nerds</h2>
-          <p class="promo-title">Долго, дорого,скрупулезно.</p>
-          <p>Математически выверенный дизайн <br>
-          для вашего сайта или мобильного приложения.</p>
-          <a class="btn btn-primary" href="catalog.html">Узнать больше</a>
+          <div class="promo-grid">
+            <div class="promo-logo">
+              <img src="img/nerds-index-slide1 1.png" width="760" height="431" alt="">
+            </div>
+            <div class="promo-text">
+              <h2 class="hidden">Описание студии Nerds</h2>
+              <p class="promo-title">Долго, дорого, скрупулезно.</p>
+              <p>Математически выверенный дизайн <br>
+              для вашего сайта или мобильного приложения.</p>
+              <a class="btn btn-primary" href="catalog.html">Узнать больше</a>
+            </div>  
+          </div>  
         </div>   
       </section>
 
@@ -71,28 +75,36 @@
     <section class="about-us  wrapper">
       <h2 class="hidden">Информаия о студии Nerds</h2> 
 
-        <p class="about-us-title">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
-        <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
-        <p class="about-us-subtitle">Выполняем заказы на разработку:</p>
-         <ul class="product-list">
-            <li class="product-list-item">Веб-сайтов любой сложности</li>
-            <li class="product-list-item">Мобильных приложений для iOS и Android</li>
-            <li class="product-list-item">Слайдшоу и видео для корпоративных презентаций</li>
-          </ul> 
-        <img src="img/nerds-illustration.png" width="360" height="280" alt="Логотип">
-        <p class="about-us-subtitle">С 2004 года Любим точность во всем:</p>
-        <table class="stats">
-          <tr>
-            <th>146<sup>%</sup></th>
-            <th>100<sup>%</sup></th>
-            <th>50<sup>%</sup></th>
-          </tr>
-          <tr>
-            <td>Уровень самоотдачи</td>
-            <td>Соблюдение сроков</td>
-            <td>Минимальная предоплата</td>
-          </tr>
-        </table>
+        <div class="about-us-grid-top-left">
+          <p class="about-us-title">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
+          <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
+        </div>
+        <div class="about-us-grid-right-top">
+          <img src="img/nerds-illustration.png" width="360" height="280" alt="Логотип">
+        </div>
+        <div class="about-us-grid-left-bottom">
+           <p class="about-us-subtitle">Выполняем заказы на разработку:</p>
+           <ul class="product-list">
+              <li class="product-list-item">Веб-сайтов любой сложности</li>
+              <li class="product-list-item">Мобильных приложений для iOS и Android</li>
+              <li class="product-list-item">Слайдшоу и видео для корпоративных презентаций</li>
+            </ul> 
+        </div>
+        <div class="about-us-grid-right-bottom">
+          <p class="about-us-subtitle">С 2004 года Любим точность во всем:</p>
+          <table class="stats">
+            <tr>
+              <th>146<sup>%</sup></th>
+              <th>100<sup>%</sup></th>
+              <th>50<sup>%</sup></th>
+            </tr>
+            <tr>
+              <td>Уровень самоотдачи</td>
+              <td>Соблюдение сроков</td>
+              <td>Минимальная предоплата</td>
+            </tr>
+          </table>
+        </div>
     </section>
 
     <section class="our-clients wrapper">
@@ -132,8 +144,10 @@
         <a class="btn btn-primary"href="#">Напишите нам</a>
       </section>
       <section class="footer-social">
-        <h2 class="footer-social-title">Давайте дружить, это выгодно!</h2>
-        <p>Скидка 10<sup></sup>% для друзей из социальных сетей.</p>
+        <div class="footer-social-grid">
+          <h2 class="footer-social-title">Давайте дружить, это выгодно!</h2>
+          <p>Скидка 10<sup>%</sup> для друзей из социальных сетей.</p>
+        </div>
         <ul class="social-links">
           <li class="social-link-item">
             <a class="social-btn social-vk"href="#">Вконтакте</a>
