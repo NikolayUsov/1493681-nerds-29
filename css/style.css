@@ -66,7 +66,8 @@ img{
 }
 
 .wrapper{
-    width: 1157px;
+    width: 1160px;
+    padding: 0px 20px;
     margin: 0 auto;
 }
 
@@ -89,11 +90,7 @@ img{
     font-size: 16px;
     line-height: 18px;
     text-transform: uppercase;
-}
-
-.h1,h3,h2,p{
-    margin:0;
-    padding: 0;
+    font-family: inherit;
 }
 
 .btn-primary{
@@ -161,6 +158,7 @@ img{
 .main-header{
     background-color: var(--basic-grey);
     margin: 0;
+    padding-top: 48px;
 }
 
 .main-header .main-nav{
@@ -177,6 +175,7 @@ img{
     line-height: 30px;
     text-transform: uppercase;
 }
+
 .cart{
     display: inline-block;
     position: relative;
@@ -196,22 +195,36 @@ img{
 
 /* grid-header */
 .header-nav{
-    display: grid;
-    grid-template-columns: 160px 1fr min-content;
+    display: flex;
     align-items: center;
 }
+
 .main-nav{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
 }
-.main-nav li{
+
+.main-nav-item{
     margin-right: 45px;
+}
+
+.main-nav-item:last-child{
+    margin-right: 0px;
+}
+
+.header-logo{
+    margin-right: 201px;
+}
+
+.cart{
+    margin-left: auto;
 }
 /* promo-style */
 
 .promo{
     background-color: var(--basic-grey);
-    padding: 15px 0;
+    padding:0;
 }
 
 .promo-title{
@@ -221,17 +234,22 @@ img{
     color: var(--basic-black);
 }
 /* grid-promo */
-.promo-grid{
+.promo-slider{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 400px 1fr;
 }
-
+.promo-logo img{
+    display: block;
+}
 .promo-text{
     order: -1;
-    padding: 60px 0 80px 0;
+    padding: 0;
 }
 
 /* service-style */
+.service{
+    padding: 80px 0;
+}
 
 .service-title{
     font-weight: bold;
@@ -252,17 +270,18 @@ img{
 /* service-grid */
 .service-list{
     display: grid;
-    grid-template-columns:300px 300px 300px;
-    column-gap: 100px;
+    grid-template-columns:repeat(3,300px);
+    gap: 50px 100px;
 }
 
 /* about-us-style */
 
 .about-us{
-    padding: 73px 0 71px 0;
+    padding: 39px 0 73px 0;
     border-bottom: 1px solid var(--basic-grey) ;
     border-top: 1px solid var(--basic-grey) ;
 }
+
 .about-us-title{
     font-weight: 500;
     font-size: 45px;
@@ -273,6 +292,11 @@ img{
     font-weight: bold;
     text-transform: uppercase;
     color: var(--basic-black);
+}
+
+.product-list{
+    padding: 0;
+    list-style: none;
 }
 
 .stats{
@@ -302,8 +326,7 @@ th sup{
 .about-us{
     display: grid;
     grid-template-columns: 2fr 1fr;
-    column-gap: 75px;
-    row-gap: 30px;
+    column-gap:  30px 75px;
 }
 /* our-clients-style */
 .our-clients{
@@ -333,7 +356,8 @@ th sup{
 
 .our-clients-list{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 20px;
     justify-items: center;
     align-items: center;
 }
@@ -424,7 +448,7 @@ th sup{
     align-items: center;
 }
 
-.footer-social-grid{
+.footer-social-info{
     order: 2;
 }
 /* modal-style */
@@ -479,8 +503,8 @@ th sup{
     border-color: var(--special-form-border-hover);
 }
 
-.form-group input:active,
-.form-group textarea:active{
+.form-group input:focus,
+.form-group textarea:focus{
     border-color: var(--basic-black);
 }
 
@@ -489,6 +513,7 @@ th sup{
 }
 
 /* сетка каталога */
+
 .catalog-main-grid{
     display: grid;
     grid-template-columns: 360px 1fr;
@@ -497,15 +522,16 @@ th sup{
 
 .catalog-list{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 40px;
+    grid-template-columns: repeat(2,358px);
+    gap: 30px 40px;
 }
 
 .sort-grid{
     display: grid;
-    grid-template-columns: 360px 360px;
+    grid-template-columns: repeat(2,358px);
     column-gap: 40px;
 }
+
 .catalog-sort{
     display: flex;
     justify-content: space-between;
@@ -517,7 +543,7 @@ th sup{
     font-weight: 500;
     font-size: 55px;
     line-height: 55px;
-    padding: 15px 0 108px 0;
+    padding: 73px 0 108px 0;
     margin: 0;
     color: var(--basic-black);
     text-align: center;
@@ -561,6 +587,10 @@ th sup{
     margin-right: 11px;  
 }
 
+.pagination-item:last-child{
+    margin-right: 0px; 
+}
+
 .pagination-item a{
     display: inline-block;
     text-align: center;
@@ -588,16 +618,15 @@ th sup{
     list-style: none;
     padding: 0;
 }
-.catalog-item{
-    width: 358px;
-    padding: 0;
+
+.catalog-item img{
+    display: block;
 }
 
 .product-info{
     background-color: var(--basic-grey);
     padding: 26px 53px 44px 53px;
     text-align: center;
-    margin-bottom: 20px;
 }
 
 .product-info h3{
