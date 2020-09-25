@@ -243,7 +243,7 @@ img{
 
 .slide{
     display: grid;
-    grid-template-columns: 432px 755px;
+    grid-template-columns: 400px 760px;
     width: inherit;
 }
 
@@ -286,6 +286,9 @@ img{
     flex-basis: 1157px;
 }
 
+#r_2:checked .slider-box-2{
+    order: 10;
+}
 /* service-style */
 
 .service{
