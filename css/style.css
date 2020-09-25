@@ -243,7 +243,8 @@ img{
 
 .slide{
     display: grid;
-    grid-template-columns: 1fr 700px;
+    grid-template-columns: 432px 755px;
+    width: inherit;
 }
 
 .slide2{
@@ -273,6 +274,16 @@ img{
 .promo-text{
     order: -1;
     padding: 0;
+}
+
+.slider{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-box{
+    flex-basis: 1157px;
 }
 
 /* service-style */
