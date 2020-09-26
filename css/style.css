@@ -413,6 +413,13 @@ th sup{
 }
 
 /* footer-contacts-style */
+.footer-map{
+    padding: 54px 0;
+    background-color: #B4B9BB;
+    background-image: url(../img/map.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 .footer-contacts{
     width: 318px;
@@ -432,8 +439,7 @@ th sup{
 
 .footer-addres a{
     color: inherit;
-    line-height: inherit;
-    
+    line-height: inherit; 
 }
 
 
