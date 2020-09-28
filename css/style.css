@@ -85,7 +85,7 @@ img{
 .btn{
     display: inline-block;
     text-align: center;
-    padding: 17px 54px 15px;
+    padding: 17px 44px 15px;
     border-radius: 3px;
     color: var(--basic-white);
     border: none;
@@ -98,7 +98,6 @@ img{
 
 .btn-primary{
     background-color: var(--special-red);
-    text-transform: uppercase;
 }
 
 .btn-primary:hover{
@@ -177,6 +176,15 @@ img{
     font-size: 16px;
     line-height: 30px;
     text-transform: uppercase;
+}
+
+.cart:hover,
+.main-nav-item a:hover{
+    color: var(--special-red);
+}
+
+.main-nav .active{
+    border-bottom: 2px solid var(--special-red) ;
 }
 
 .cart{
@@ -372,8 +380,8 @@ th sup{
 
 .about-us{
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    column-gap:  30px 75px;
+    grid-template-columns: 1fr 360px;
+    gap:  37px 149px;
 }
 
 /* our-clients-style */
@@ -413,16 +421,19 @@ th sup{
 }
 
 /* footer-contacts-style */
+
 .footer-map{
     padding: 54px 0;
     background-color: #B4B9BB;
     background-image: url(../img/map.png);
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
 }
 
 .footer-contacts{
-    width: 318px;
+    background-color: var(--basic-white);
+    width: 219px;
+    padding: 50px;
 }
 
 .footer-contacts .footer-title{
