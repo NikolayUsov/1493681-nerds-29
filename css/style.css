@@ -40,8 +40,7 @@
     min-height: 100%;
     display: grid;
     grid-template-rows: min-content 1fr min-content;
-    align-content: start;
-    
+    align-content: start;  
 }
 
 .page{
@@ -318,20 +317,18 @@ img{
 /* service-grid */
 
 .service-list{
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-}
-
-.service-list-item{
-    margin: 0 100px 30px 0;
-}
-
-.service-list-item:nth-child(3n){
-    margin-right: 0;
+    display: grid;
+    grid-template-columns: repeat(3,300px);
+    gap: 30px 100px;
 }
 
 /* about-us-style */
+
+.about-us-title,
+.about-us-subtitle,
+.about-us-text{
+    margin: 0;
+}
 
 .about-us{
     padding: 39px 0 73px 0;
@@ -343,21 +340,31 @@ img{
     font-weight: 500;
     font-size: 45px;
     line-height: 45px;
+    margin-bottom: 34px;
 }
 
 .about-us-subtitle{
     font-weight: bold;
     text-transform: uppercase;
     color: var(--basic-black);
+    margin-bottom: 24px;
 }
 
 .product-list{
-    padding: 0;
     list-style: none;
+    margin: 0;
 }
 
 .stats{
     border: none;
+}
+
+.product-list .product-list-item{
+    margin-bottom: 33px;
+}
+
+.product-list .product-list-item:last-child{
+    margin-bottom: 0;
 }
 
 .stats th{
@@ -384,19 +391,29 @@ th sup{
 .about-us{
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    align-content: flex-start;
-    flex-wrap: wrap;
 }
 
-.about-us-describe{
+.about-us-info{
+    padding-top:34px;
     max-width: 651px;
-    margin-right: 149px;
 }
 
-.about-us-logo,
-.about-us-static{
+.about-us-media{
     width: 360px;
+}
+
+.about-us-info,
+.about-us-media{
+    display: flex;
+    flex-direction: column;
+}
+
+.about-us-services{
+    margin-top: 40px;
+}
+
+.about-us-static{
+    margin-top: 37px;
 }
 
 /* our-clients-style */
@@ -428,14 +445,11 @@ th sup{
 /* our-clients-grid */
 
 .our-clients-list{
-    display: flex;
-    justify-content: start;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px 40px;
     align-items: center;
-    flex-wrap: wrap;
-}
-
-.our-clients-item{
-    margin: 0 49px 15px;
+    justify-items: center;
 }
 
 /* footer-contacts-style */
