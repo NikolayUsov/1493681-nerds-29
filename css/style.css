@@ -308,6 +308,7 @@ img{
 .service-list{
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .service-list-item{
@@ -503,6 +504,7 @@ th sup{
 .social-links{
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .social-link-item{
@@ -637,16 +639,22 @@ th sup{
 }
 
 .sort-grid{
-    display: grid;
-    grid-template-columns: repeat(2,358px);
-    column-gap: 40px;
+    display: flex;
+    align-items: baseline;
 }
 
 .catalog-sort{
-    display: flex;
-    justify-content: space-between;
-    
+    margin: 0 0 0 auto;
+    display: flex;  
 }
+.catalog-sort-item{
+    margin-right: 25px;
+}
+
+.catalog-sort .catalog-sort-item:last-child{
+    margin-right: 0;
+}
+
 /* стили каталога */
 
 .catalog-title{
@@ -757,7 +765,6 @@ th sup{
 
 .catalog-sort{
     list-style: none;
-    margin: 0;
     padding: 0;
 }
 
@@ -772,4 +779,5 @@ th sup{
     font-weight: bold;
     font-size: 18px;
     line-height: 30px;
+    margin: 0;
 }
