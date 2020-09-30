@@ -46,6 +46,9 @@
 .page{
     height: 100%;
   }
+main{
+    padding: 0 0 80px 0;
+}
 
 a{
     text-decoration:none;
@@ -238,6 +241,7 @@ img{
     font-size: 55px;
     line-height: 55px;
     color: var(--basic-black);
+    margin: 0 0 25px 0;
 }
 
 /* grid-promo */
@@ -275,7 +279,11 @@ img{
 
 .promo-text{
     order: -1;
-    padding: 0;
+    padding: 25px 0 0 0;
+}
+
+.promo p{
+    margin: 0 0 38px 0;
 }
 
 .slider{
@@ -303,6 +311,7 @@ img{
     line-height: 30px;
     text-transform: uppercase;
     color: var(--basic-black);
+    margin: 0 0 16px 0;
 }
 
 .service-list{
@@ -313,6 +322,15 @@ img{
 
 .service-list-item{
     width: 300px;
+}
+
+.service-list-item p{
+    margin: 0 0 32px 0;
+}
+
+.service-list-item img{
+    width: 100%;
+    margin: 0 0 25px 0;
 }
 
 /* service-grid */
@@ -360,13 +378,11 @@ img{
     border: none;
 }
 
-.product-list .product-list-item{
+.product-list .product-list-item:not(:last-child){
     margin-bottom: 33px;
 }
 
-.product-list .product-list-item:last-child{
-    margin-bottom: 0;
-}
+
 
 .stats th{
     color: var(--basic-black);
@@ -410,18 +426,17 @@ th sup{
 }
 
 .about-us-services{
-    margin-top: 40px;
+    padding-top: 40px;
 }
 
 .about-us-static{
-    margin-top: 37px;
+    padding: 37px 0 0 0;
 }
 
 /* our-clients-style */
 
 .our-clients{
-    margin-bottom: 80px;
-    padding: 53px 0 44px 0;
+    padding: 42px 0;
     border-bottom: 1px solid var(--basic-grey);
 }
 
@@ -447,7 +462,7 @@ th sup{
 
 .our-clients-list{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4,25%);
     gap: 20px 40px;
     align-items: center;
     justify-items: center;
@@ -474,16 +489,20 @@ th sup{
     font-size: 18px;
     line-height: 30px;
     text-transform: uppercase;
+    margin: 0 0 22px 0;
 }
 
 .footer-contacts .footer-addres{
     line-height: 18px;
     color: var(--basic-black-darken);
+    margin: 0 0 16px 0;
 }
 
-.footer-addres a{
+.footer-contacts .footer-phone-number{
+    display: inline-block;
     color: inherit;
     line-height: inherit; 
+    margin: 0 0 21px 0;
 }
 
 .footer-social-title{
@@ -492,6 +511,11 @@ th sup{
     line-height: 36px;
     text-align: center;
     color: var(--basic-black);
+    margin: 0 0 10px 0;
+}
+
+.footer-social-info p{
+    margin: 0;
 }
 
 .footer-social{
@@ -499,6 +523,7 @@ th sup{
     line-height: 22px;
     color: var(--basic-light-dark);
     text-align: center;
+    padding: 68px 0;
 }
 
 .social-links{
@@ -547,12 +572,10 @@ th sup{
 
 .footer-social{
     display: flex;
-    justify-content: flex-start;
     align-items: center;
 }
 
 .footer-social-info{
-    margin-left: 139px;
     order: 2;
 }
 
@@ -560,6 +583,7 @@ th sup{
     display: flex;
     min-width: 261px;
     justify-content: space-between;
+    margin: 0 139px 0 0;
 }
 
 /* modal-style */
