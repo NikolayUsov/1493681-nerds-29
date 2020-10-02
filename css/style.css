@@ -26,6 +26,9 @@
   --special-form-border-error: #E74246;
   --special-social--inactiv: #E1E1E1;
   --special-pagination-border: #DBDBDB;
+  --special-radio-button-normal-color: rgba(77, 77, 77, 0.4);
+  --special-radio-button-hover-color:  rgba(77, 77, 77, 1);
+  --special-radio-button-disabled-color: rgba(77, 77, 77, 0.1);
 }
 
 /* Basic-style */
@@ -73,9 +76,16 @@ img{
 }
 
 .hidden{
-   position: absolute;
-   top: -9999px;
-   left: -9999px;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 /* style-btn and btn-active */
@@ -734,6 +744,8 @@ th sup{
 
 .filter-form fieldset{
     border: none;
+    padding: 0;
+    margin: 0 0 50px 0;
 }
 
 .filter-form legend{
@@ -741,6 +753,7 @@ th sup{
     font-size: 18px;
     line-height: 30px;
     color: var(--basic-black);
+    margin-bottom: 30px;
 }
 
 .filter-form-list{
@@ -753,8 +766,62 @@ th sup{
     color: var(--basic-extra-dark);
 }
 
-.filter-option{
-    margin-bottom: 5px;
+/* стили чекбоксов и радиокнопок */
+.filter-option label{
+    position: relative;
+    padding-left: 36px;
+}
+
+.filter-input-radio+label::before{
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 0px;
+    width: 18px;
+    height: 18px;
+    border: 3px solid var(--special-radio-button-normal-color);
+    border-radius: 50%;
+}
+
+.filter-input-radio:checked +label::after{
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--special-radio-button-normal-color);
+}
+
+.filter-input-checkbox+label::before{
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 23px;
+    height: 23px;
+    border-radius: 5px;
+    background-image: url(../img/checkbox-off.svg);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.filter-input-checkbox:checked+label::after{
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 23px;
+    height: 23px;
+    border-radius: 5px;
+    background: url(../img/checkbox-on.svg);    
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.filter-option:not(:last-child){
+    margin-bottom: 30px;
 }
 
 .pagination{
