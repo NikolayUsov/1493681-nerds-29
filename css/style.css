@@ -11,6 +11,7 @@
   --basic-extra-grey: #D5D5D5;
   --basic-white: #ffffff;
   --spicial-black-opacity:rgba(0, 1, 1, 0.1);
+  --special-white-opacity: rgba(255,255,255, 0.3);
   --special-red: #FB565A;
   --special-dark-red: #E74246;
   --special-extra-red: #D7373B;
@@ -104,6 +105,7 @@ img{
 .btn-primary:active{
     background-color: var(--special-extra-red);
     box-shadow: inset 0 3px 0 var(--spicial-black-opacity);
+    color: var(--special-white-opacity)
 }
 
 .btn-secondary{
@@ -118,7 +120,7 @@ img{
 .btn-secondary:active{
     background-color: var(--basic-extra-grey);
     box-shadow: inset 0 3px 0 var(--spicial-black-opacity);
-    opacity: 0.3;
+    color: var(--special-white-opacity)
 }
 
 /* style-btn and btn-active кнопки секции сервис */
@@ -134,6 +136,7 @@ img{
 .btn-order-app:active{
     background-color: var(--special-extra-green);
     box-shadow: inset 0 3px 0 var(--spicial-black-opacity);
+    color: var(--special-white-opacity)
 }
 
 .btn-order-presentation{
@@ -147,6 +150,7 @@ img{
 .btn-order-presentation:active{
     background-color: var(--special-extra-yellow);
     box-shadow: inset 0 3px 0 var(--spicial-black-opacity);
+    color: var(--special-white-opacity)
 }
 
 /* style */
@@ -372,17 +376,31 @@ img{
 .product-list{
     list-style: none;
     margin: 0;
+    padding-left: 37px;
 }
 
 .stats{
     border: none;
 }
 
-.product-list .product-list-item:not(:last-child){
+.product-list .product-list-item{
+    position: relative;
     margin-bottom: 33px;
 }
 
+.product-list .product-list-item:last-child{
+    margin-bottom: 0px;
+}
 
+.product-list-item::before{
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: -37px;
+    height: 2px;
+    width: 25px;
+    background-color: var(--special-red);
+}
 
 .stats th{
     color: var(--basic-black);
@@ -447,7 +465,9 @@ th sup{
 }
 
 .our-clients-item{
-    opacity: 0.2;   
+    opacity: 0.2;  
+    position: relative; 
+    border-right: 3px solid red;
 }
 
 .our-clients-item:hover{
@@ -463,9 +483,20 @@ th sup{
 .our-clients-list{
     display: grid;
     grid-template-columns: repeat(4,25%);
-    gap: 20px 40px;
+    gap: 20px;
     align-items: center;
     justify-items: center;
+}
+
+.our-clients-item:not(:last-child)::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -50px;
+    width: 2px;
+    height: 52px;
+    background-color: transparent;
+    border-right: 2 px solid var(--basic-grey);
 }
 
 /* footer-contacts-style */
