@@ -6,7 +6,7 @@
   --basic-light-dark: #444444;
   --special-opacity-black: rgba(0, 0, 0, 0.4);
   --basic-black-darken: #666;
-  --basic-grey: #EEEEEE;
+  --basic-grey: rgb(238, 238, 238);
   --basic-dark-grey:#DFDFDF;
   --basic-extra-grey: #D5D5D5;
   --basic-white: #ffffff;
@@ -467,7 +467,13 @@ th sup{
 .our-clients-item{
     opacity: 0.2;  
     position: relative; 
-    border-right: 3px solid red;
+    padding-right: 50px;
+    border-right: 3px solid rgb(238, 238, 238, 1);
+}
+
+.our-clients-item:last-child{
+    padding-right: 0;
+    border: none;
 }
 
 .our-clients-item:hover{
