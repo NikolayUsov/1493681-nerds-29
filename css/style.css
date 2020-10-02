@@ -799,12 +799,16 @@ th sup{
     position: absolute;
     top: -3px;
     left: 0;
-    width: 23px;
-    height: 23px;
-    border-radius: 5px;
+    width: 24px;
+    height: 24px;
     background-image: url(../img/checkbox-off.svg);
     background-position: 0 0;
     background-repeat: no-repeat;
+    opacity: 0.4;
+}
+
+.filter-input-checkbox:checked+label::before{
+    display: none;
 }
 
 .filter-input-checkbox:checked+label::after{
@@ -812,12 +816,26 @@ th sup{
     position: absolute;
     top: -3px;
     left: 0;
-    width: 23px;
-    height: 23px;
+    width: 24px;
+    height: 24px;
     border-radius: 5px;
     background: url(../img/checkbox-on.svg);    
     background-position: 0 0;
     background-repeat: no-repeat;
+    opacity: 0.4;
+}
+
+.filter-input-radio:hover+label::before{
+    border-color: var(--special-radio-button-hover-color);
+}
+
+.filter-input-radio:hover+label::after{
+    background-color: var(--special-radio-button-hover-color);
+}
+
+.filter-input-checkbox:hover+label::before,
+.filter-input-checkbox:hover+label::after{
+    opacity: 1;
 }
 
 .filter-option:not(:last-child){
