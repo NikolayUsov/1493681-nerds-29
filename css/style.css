@@ -6,7 +6,7 @@
   --basic-light-dark: #444444;
   --special-opacity-black: rgba(0, 0, 0, 0.4);
   --basic-black-darken: #666;
-  --basic-grey: rgb(238, 238, 238);
+  --basic-grey: #eeeeee;
   --basic-dark-grey:#DFDFDF;
   --basic-extra-grey: #D5D5D5;
   --basic-white: #ffffff;
@@ -474,23 +474,25 @@ th sup{
     margin: 0;
 }
 
-.our-clients-item{
-    opacity: 0.2;  
-    position: relative; 
-    padding-right: 50px;
-    border-right: 3px solid rgb(238, 238, 238, 1);
+.our-clients-item:not(:last-child)::after{ 
+   content: "";
+   position: absolute;
+   right: 0;
+   top: 22px;
+   width: 2px;
+   height: 52px;
+   background-color: var(--basic-grey);
 }
 
-.our-clients-item:last-child{
-    padding-right: 0;
-    border: none;
+.our-clients-item a{
+    opacity: 0.2;
 }
 
-.our-clients-item:hover{
+.our-clients-item:hover a{
     opacity: 1;   
 }
 
-.our-clients-item:active{
+.our-clients-item:active a{
     opacity: 0.2;   
 }
 
@@ -498,21 +500,15 @@ th sup{
 
 .our-clients-list{
     display: grid;
-    grid-template-columns: repeat(4,25%);
-    gap: 20px;
-    align-items: center;
-    justify-items: center;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px 0;
 }
 
-.our-clients-item:not(:last-child)::after{
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: -50px;
-    width: 2px;
-    height: 52px;
-    background-color: transparent;
-    border-right: 2 px solid var(--basic-grey);
+.our-clients-item{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* footer-contacts-style */
@@ -816,9 +812,8 @@ th sup{
     position: absolute;
     top: -3px;
     left: 0;
-    width: 24px;
-    height: 24px;
-    border-radius: 5px;
+    width: 27px;
+    height: 26px;
     background: url(../img/checkbox-on.svg);    
     background-position: 0 0;
     background-repeat: no-repeat;
@@ -837,6 +832,14 @@ th sup{
 .filter-input-checkbox:hover+label::after{
     opacity: 1;
 }
+
+.filter-input-radio:disabled+label::before,
+.filter-input-radio:disabled+label::after,
+.filter-input-checkbox:disabled+label::before,
+.filter-input-checkbox:disabled+label::after{
+    opacity: 0.1;
+}
+
 
 .filter-option:not(:last-child){
     margin-bottom: 30px;
