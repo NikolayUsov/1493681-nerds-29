@@ -11,6 +11,8 @@
   --basic-extra-grey: #D5D5D5;
   --basic-white: #ffffff;
   --spicial-black-opacity:rgba(0, 1, 1, 0.1);
+  --spicial-black-opacity-30: rgba(0, 0, 0, 0.3);
+  --spicial-black-opacity-60: rgba(0, 0, 0, 0.6);
   --special-white-opacity: rgba(255,255,255, 0.3);
   --special-red: #FB565A;
   --special-dark-red: #E74246;
@@ -61,6 +63,14 @@ a{
     line-height: inherit;
     font-weight: inherit;
 }
+button{
+    border: none;
+}
+
+button:active, 
+button:focus{
+    outline: none;
+  }
 
 /* position-style */
 
@@ -570,36 +580,26 @@ th sup{
 }
 
 .social-links{
+    display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
 .social-link-item{
-    display: inline-block;
+    justify-content: center;
+    align-items: center;
 }
 
 .social-btn{
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 81px;
     height: 81px;
     border-radius:50%;
     font-size: 0;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: var(--special-social--inactiv) ;
- 
-}
-.social-vk{
-    background-image: url("../img/vk-icon.svg");  
-}
-
-.social-fb{
-    background-image: url("../img/fb-icon.svg");  
-}
-
-.social-inst{
-    background-image: url("../img/insta-icon.svg");  
+    background-color: var(--special-social--inactiv);
 }
 
 .social-btn:hover{
@@ -609,6 +609,10 @@ th sup{
 .social-btn:active{
     background-color: var(--special-extra-red);
     box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+}
+
+.social-btn:active svg{
+    opacity: 0.3;
 }
 
 /* footer-grid */
@@ -632,6 +636,7 @@ th sup{
 /* modal-style */
 
 .modal{
+    position: relative;
     width: 960px;
     padding: 63px 99px 84px 100px;
     margin: 15px 0;
@@ -846,12 +851,13 @@ th sup{
 }
 
 .pagination{
+    display: flex;
     list-style: none;
     padding:0;
+    margin: 0;
 }
 
 .pagination-item{
-    display: inline-block;
     margin-right: 11px;  
 }
 
@@ -868,13 +874,23 @@ th sup{
     color: var(--basic-black);
     text-transform: uppercase;
     padding: 17px 20px 15px 20px;
-    border: 3px solid var(--special-pagination-border);
     border-radius: 3px;
     background-color: var(--basic-grey);
 }
 
+.pagination-item a:not(.active):hover{
+    background-color: #DFDFDF;
+}
+
+.pagination-item a:not(.active):active{
+    background-color: var(--basic-extra-grey);
+    box-shadow: inset 0 3px 0 var(--spicial-black-opacity);
+    color: var(--spicial-black-opacity-30);
+}
+
 .pagination-item .active{
     background-color: transparent;
+    border: 3px solid var(--special-pagination-border);
 }
 
 .pagination-item:last-child a{
@@ -917,16 +933,44 @@ th sup{
     padding: 0;
 }
 
-.catalog-sort-item a{
-    color: var(--basic-black);
+.btn-sort{
+    color: var(--spicial-black-opacity-30);
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
 }
 
+.btn-sort:hover{
+    color: var(--spicial-black-opacity-60);
+}
+
+.btn-sort.btn-sort-active,
+.btn-sort:active{
+    color: var(--basic-black)
+}
 .subtitle-catalog-sort{
     font-weight: bold;
     font-size: 18px;
     line-height: 30px;
     margin: 0;
+}
+
+.close-btn{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 21px;
+    height: 21px;
+    background-color: transparent;
+    font-size: 0;
+    opacity: 0.3;
+    background:url(../img/close-cross.svg) no-repeat center center;
+}
+
+.close-btn:hover{
+    opacity: 1;
+}
+
+.close-btn:active{
+    opacity: 0.1;
 }
