@@ -903,14 +903,37 @@ th sup{
     padding: 0;
 }
 
+.catalog-item{
+    position: relative;
+    width: 360px;
+    border-radius: 5px;
+    border: 1px solid var(--spicial-black-opacity);
+}
+.catalog-item-browser{
+    transition: opacity 1s ease-out;
+}
+
+.catalog-item:hover .catalog-item-browser{
+    fill-opacity: 1;
+}
+
+.catalog-item:hover .product-info{
+    opacity: 1;
+} 
+
+
 .catalog-item img{
     display: block;
 }
 
 .product-info{
+    position: absolute;
+    bottom: 0;
     background-color: var(--basic-grey);
     padding: 26px 53px 44px 53px;
     text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
 }
 
 .product-info h3{
