@@ -34,8 +34,7 @@
       <section class="promo">
         <div class="wrapper">
           <div class="slider">
-            <div class="slider-box ">
-              <div class="slide slide1">
+              <div class="slide slide1 active-slide">
                 <div class="promo-logo">
                   <img src="img/nerds-index-slide1 1.png" width="760" height="431" alt="">
                 </div>
@@ -47,8 +46,6 @@
                   <a class="btn btn-primary" href="catalog.html">Узнать больше</a>
                 </div>  
               </div>  
-            </div>
-          <div class="slider-box slider-box-2">
             <div class="slide slide2">
               <div class="promo-logo">
                 <img src="img/nerds-index-slide2 1.png" width="760" height="431" alt="">
@@ -59,8 +56,6 @@
                   <a class="btn btn-primary" href="catalog.html">Узнать больше</a>
                </div>  
             </div> 
-          </div>  
-            <div class="slider-box">
               <div class="slide slide3">
                 <div class="promo-logo">
                   <img src="img/nerds-index-slide3 1.png" width="760" height="431" alt="">
@@ -72,7 +67,6 @@
                     <a class="btn btn-primary" href="catalog.html">Узнать больше</a>
                   </div>  
               </div>
-            </div>
             </div>
           </div>  
           </div>
@@ -217,21 +211,21 @@
       <section class="modal">
         <h2 class="modal-title">Личный кабинет</h2>
         <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-          <div class="form-group">
-            <label class="" for="name">Ваше имя</label>
-            <input class="" id="name" type="text" name="login" placeholder="Имя Фамилия">  
-          </div>
-          <div class="form-group">
-            <label class="" for="email">Ваш e-mail</label>
-            <input class="" id="email" type="email" name="login" placeholder="email@example.com">  
+          <div class="double-form-group">
+            <div class="form-group">
+              <label class="" for="name">Ваше имя</label>
+              <input class="" id="name" type="text" name="login" placeholder="Имя Фамилия">  
+            </div>
+            <div class="form-group">
+              <label class="" for="email">Ваш e-mail</label>
+              <input class="" id="email" type="email" name="login" placeholder="email@example.com">  
+            </div>
           </div>
           <div class="form-group">
             <label class="" for="message">Текст письма:</label>
-            <textarea class="" id="message" name="message"  type="text">В свободной форме</textarea>  
+            <textarea class="" id="message" name="message"  type="text" placeholder="В свободной форме"></textarea>  
           </div>
-          <div class="form-group">
             <button class="btn btn-primary" type="submit">Отправить</button>
-          </div> 
         </form>
         <button type="button" class="close-btn">Закрыть</button>
       </section>  

@@ -280,7 +280,8 @@ img{
 
 /* grid-promo */
 
-.slide{
+.slide1,
+.slide3{
     display: grid;
     grid-template-columns: 400px 760px;
     width: inherit;
@@ -321,13 +322,24 @@ img{
 }
 
 .slider{
-    display: flex;
+    position: relative;
     width: 100%;
-    overflow: hidden;
+    min-height: 431px;
 }
 
-.slider-box{
-    flex-basis: 1157px;
+.slide{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.active-slide{
+    opacity: 1;
+    z-index: 2;
 }
 
 /*#r_2:checked .slider-box-2{
@@ -426,8 +438,8 @@ img{
     content: " ";
     position: absolute;
     top: 50%;
-    bottom: 1px;
     left: -37px;
+    margin-top: -1px;
     height: 2px;
     width: 25px;
     background-color: var(--special-red);
@@ -573,7 +585,6 @@ th sup{
     font-weight: bold;
     font-size: 36px;
     line-height: 36px;
-    text-align: center;
     color: var(--basic-black);
     margin: 0 0 10px 0;
 }
@@ -586,7 +597,6 @@ th sup{
     font-size: 16px;
     line-height: 22px;
     color: var(--basic-light-dark);
-    text-align: center;
     padding: 68px 0;
 }
 
@@ -644,13 +654,29 @@ th sup{
     margin: 0 139px 0 0;
 }
 
+/* modal-grid */
+.double-form-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.double-form-group .form-group{
+    width: 360px;
+}
 /* modal-style */
 
 .modal{
-    position: relative;
+    position: fixed;
+    display: none;
+    top: 50%;
+    left: 50%;
+    margin-left: -430px;
+    margin-top: -295px;
     width: 960px;
+    height: 590px;
+    box-sizing: border-box;
     padding: 63px 99px 84px 100px;
-    margin: 15px 0;
     background-color: var(--basic-white);
     box-shadow: 0 20px 40px var(--special-opacity-black);
 }
@@ -659,6 +685,8 @@ th sup{
     font-weight: bold;
     font-size: 45px;
     line-height: 53px;
+    margin: 0;
+    margin-bottom: 37px;
 }
 
 .form-group{
@@ -682,7 +710,7 @@ th sup{
   height: 50px;
   padding: 16px 14px 16px 16px;
   border: 2px solid var(--special-form-border-inactiv);
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 .form-group textarea{
@@ -946,7 +974,7 @@ th sup{
     padding: 26px 53px 44px 53px;
     text-align: center;
     opacity: 0;
-    transition: opacity 0.5s ease-out;
+    transition: opacity 0.2s ease-out;
 }
 
 .product-info h3{
