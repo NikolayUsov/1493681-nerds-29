@@ -1101,3 +1101,76 @@ th sup{
     outline: none;
     opacity: 0.1;
 }
+
+.range-filter{
+    width: 260px;
+  }
+  
+.range-controls{
+    position: relative;
+    height: 41px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding-top: 39px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .range-controls .scale{
+    height: 2px;
+    background: #d7dcde;
+  }
+
+  .range-controls .bar{
+    width: 70%;
+    height: 2px;
+    background: #00ca74;
+  }
+
+  .range-controls .toggle{
+    position: absolute;
+    top: 31px;
+    left: 0; 
+    width: 4px;
+    height: 4px;
+    padding: 0;
+    border: 8px solid #ffffff;
+    background-color: #ababab;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 #cfcfcf;
+    cursor: pointer;
+  }
+
+  .range-controls .toggle-min{
+    left: 18px;
+  }
+  
+  .range-controls .toggle-max{
+    left: 160px;
+  }
+
+  .price-controls{
+      width: 260px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .price-controls label{
+    text-transform: uppercase;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 16px;
+  }
+  
+  .price-controls input{
+    width: 60px;
+    padding: 10px;
+    margin-left: 10px;
+    text-align: center;
+    color: #283136;
+    border: none;
+    border-radius: 5px;
+    background: #f1f1f1;
+    font-family: inherit;
+    font-size: inherit;
+  }

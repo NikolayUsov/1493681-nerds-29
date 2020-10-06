@@ -40,7 +40,23 @@
           <form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
             <fieldset>
               <legend>Стоимость:</legend>
-  
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle toggle-min" tabindex="0"></div>
+                  <div class="toggle toggle-max" tabindex="0"></div>
+                </div>
+              </div>
+                <div class="price-controls">
+                  <label class="min-price">
+                    от <input type="number" name="min-price" value="0">
+                  </label>
+                  <label class="max-price">
+                    до <input type="number" name="max-price" value="15000">
+                  </label>
+                </div>
             </fieldset> 
             <fieldset>
               <legend>Сетка:</legend>
