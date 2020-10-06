@@ -12,9 +12,11 @@
   --basic-extra-grey: #D5D5D5;
   --basic-white: #ffffff;
   --special-black-opacity:rgba(0, 1, 1, 0.1);
+  --special-black-opacity-25:rgba(0, 1, 1, 0.25);
   --special-black-opacity-30: rgba(0, 0, 0, 0.3);
   --special-black-opacity-60: rgba(0, 0, 0, 0.6);
   --special-white-opacity: rgba(255,255,255, 0.3);
+  --special-color-for-icon-sort: #231F20;
   --special-red: #FB565A;
   --special-dark-red: #E74246;
   --special-extra-red: #D7373B;
@@ -439,7 +441,7 @@ img{
     position: absolute;
     top: 50%;
     left: -37px;
-    margin-top: -1px;
+    transform: translateY(-50%);
     height: 2px;
     width: 25px;
     background-color: var(--special-red);
@@ -671,14 +673,13 @@ th sup{
     display: none;
     top: 50%;
     left: 50%;
-    margin-left: -430px;
-    margin-top: -295px;
+    transform: translate(-50% , -50%);
     width: 960px;
-    height: 590px;
     box-sizing: border-box;
     padding: 63px 99px 84px 100px;
     background-color: var(--basic-white);
     box-shadow: 0 20px 40px var(--special-opacity-black);
+    z-index: 100;
 }
 
 .modal-title{
@@ -741,6 +742,7 @@ th sup{
     display: grid;
     grid-template-columns: 360px 1fr;
     column-gap: 40px;
+    padding: 55px 0 60px 0;
 }
 
 .catalog-list{
@@ -760,7 +762,11 @@ th sup{
 }
 
 .catalog-sort-item{
-    margin-right: 25px;
+    margin-right: 24px;
+}
+
+.catalog-sort .catalog-sort-item:nth-last-child(2){
+    margin: 0 18px 0 27px;
 }
 
 .catalog-sort .catalog-sort-item:last-child{
@@ -768,6 +774,10 @@ th sup{
 }
 
 /* стили каталога */
+
+.catalog-title-section{
+    background-color: var(--basic-grey);
+}
 
 .catalog-title{
     font-weight: 500;
@@ -780,7 +790,7 @@ th sup{
 }
 
 .catalog_main{
-    padding: 55px 0;
+    padding: 0;
 }
 
 .filter-form fieldset{
@@ -898,7 +908,8 @@ th sup{
 }
 
 .pagination-item{
-    margin-right: 11px;  
+    margin-right: 11px;
+    box-sizing: border-box;
 }
 
 .pagination-item:last-child{
@@ -916,21 +927,26 @@ th sup{
     padding: 17px 20px 15px 20px;
     border-radius: 3px;
     background-color: var(--basic-grey);
+    border-width: 3px;
+    border-style: solid;
+    border-color: var(--basic-grey);
 }
 
 .pagination-item a:not(.active):hover{
-    background-color: #DFDFDF;
+    background-color: var(--basic-dark-grey);
+    border-color: var(--basic-dark-grey);
 }
 
 .pagination-item a:not(.active):active{
     background-color: var(--basic-extra-grey);
+    border-color: var(--basic-dark-grey);
     box-shadow: inset 0 3px 0 var(--special-black-opacity);
     color: var(--special-black-opacity-30);
 }
 
 .pagination-item .active{
     background-color: transparent;
-    border: 3px solid var(--special-pagination-border);
+    border-color: var(--special-pagination-border);
 }
 
 .pagination-item:last-child a{
@@ -941,16 +957,29 @@ th sup{
 .catalog-list{
     list-style: none;
     padding: 0;
+    margin: 0;
+    margin-bottom: 54px;
 }
 
 .catalog-item{
     position: relative;
     width: 360px;
+    height: 619px;
+    box-sizing: border-box;
     border-radius: 5px;
     border: 1px solid var(--special-black-opacity);
 }
+
+.catalog-item svg{
+    display: block;
+}
+
 .catalog-item-browser{
     transition: opacity 300ms ease-out;
+}
+
+.catalog-item:hover{
+    box-shadow: 0px 6px 15px var( --special-black-opacity-25);
 }
 
 .catalog-item:hover .catalog-item-browser{
@@ -970,25 +999,40 @@ th sup{
     position: absolute;
     bottom: 0;
     left: 0;
+    width: 100%;
+    max-height: 80%;
+    box-sizing: border-box;
+    border-radius: 3px;
     background-color: var(--basic-grey);
     padding: 26px 53px 44px 53px;
     text-align: center;
+    overflow-y: auto;
     opacity: 0;
     transition: opacity 0.2s ease-out;
 }
 
-.product-info h3{
+.product-info-title{
     font-weight: bold;
     font-size: 18px;
     line-height: 30px;
     color: var(--basic-black);
     margin: 0;
+    margin-bottom: 12px;
     padding: 0;
+}
+
+.product-info-title a:hover{
+    color: var(--special-red);
+}
+
+.product-info-title a:active{
+    color: var(--special-black-opacity-30);
 }
 
 .product-info p{
     line-height: 18px;
     margin: 0;
+    margin-bottom: 33px;
     padding: 0;
 }
 
@@ -1011,6 +1055,22 @@ th sup{
 .btn-sort.btn-sort-active,
 .btn-sort:active{
     color: var(--basic-black)
+}
+
+.sort-btn-up-icon:hover,
+.sort-btn-down-icon:hover{
+    fill-opacity: 1;
+}
+
+.sort-btn-up-icon:active,
+.sort-btn-down-icon:active{
+    fill: var( --special-color-for-icon-sort);
+    fill-opacity: 1;
+}
+
+.icon-sort-active{
+    fill: var( --special-color-for-icon-sort);
+    fill-opacity: 1;
 }
 
 .subtitle-catalog-sort{
