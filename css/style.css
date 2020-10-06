@@ -666,6 +666,7 @@ th sup{
 .double-form-group .form-group{
     width: 360px;
 }
+
 /* modal-style */
 
 .modal{
@@ -818,6 +819,7 @@ th sup{
 }
 
 /* стили чекбоксов и радиокнопок */
+
 .filter-option label{
     position: relative;
     padding-left: 36px;
@@ -894,7 +896,6 @@ th sup{
 .filter-input-checkbox:disabled + label::after{
     opacity: 0.1;
 }
-
 
 .filter-option:not(:last-child){
     margin-bottom: 30px;
@@ -989,7 +990,6 @@ th sup{
 .catalog-item:hover .product-info{
     opacity: 1;
 } 
-
 
 .catalog-item img{
     display: block;
