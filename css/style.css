@@ -61,11 +61,7 @@
 }
 
 a{
-    text-decoration:none;
-    font-size: inherit;
-    color: inherit;
-    line-height: inherit;
-    font-weight: inherit;
+    text-decoration:none;   
 }
 
 button{
@@ -137,10 +133,12 @@ img{
     background-color: var(--basic-dark-grey);
 }
 
-.btn-secondary:active{
+.btn-secondary:active,
+.btn-secondary:focus{
     background-color: var(--basic-extra-grey);
     box-shadow: inset 0 3px 0 var(--special-black-opacity);
-    color: var(--special-white-opacity)
+    color: var(--special-white-opacity);
+    outline:none;
 }
 
 /* style-btn and btn-active кнопки секции сервис */
@@ -202,17 +200,23 @@ img{
     color: var(--special-red);
 }
 
+.main-nav-item{
+    position: relative;
+}
+
 .cart:active,
 .main-nav-item a:active{
     color: var(--special-black-opacity-30);
 }
 
-.main-nav .main-nav-item{
-    border-bottom: 2px solid transparent ;
-}
-
-.main-nav .active{
-    border-bottom: 2px solid var(--special-red) ;
+.main-nav-item.active a::before{
+    position: absolute;
+    bottom: -13px;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: var( --special-red);
 }
 
 .cart{
@@ -509,7 +513,7 @@ th sup{
     margin: 0;
 }
 
-.our-clients-item:not(:last-child)::after{ 
+.our-clients-item:not(:last-child):not(:nth-child(4n))::after{ 
    content: "";
    position: absolute;
    right: 0;
@@ -578,8 +582,11 @@ th sup{
 
 .footer-contacts .footer-phone-number{
     display: inline-block;
-    color: inherit;
-    line-height: inherit; 
+    color: var(--basic-black-darken);
+    font-family: inherit;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px; 
     margin: 0 0 21px 0;
 }
 
@@ -754,7 +761,8 @@ th sup{
 
 .sort-grid{
     display: flex;
-    align-items: baseline;
+    align-items: center;
+    margin-bottom: 48px;
 }
 
 .catalog-sort{
@@ -797,7 +805,7 @@ th sup{
 .filter-form fieldset{
     border: none;
     padding: 0;
-    margin: 0 0 50px 0;
+    margin: 0 0 46px 0;
 }
 
 .filter-form legend{
@@ -805,7 +813,11 @@ th sup{
     font-size: 18px;
     line-height: 30px;
     color: var(--basic-black);
-    margin-bottom: 30px;
+    margin-bottom: 16px;
+}
+
+.filter-form .price-legend{
+    margin-bottom: 48px;
 }
 
 .filter-form-list{
@@ -852,29 +864,15 @@ th sup{
     position: absolute;
     top: -3px;
     left: 0;
-    width: 24px;
-    height: 24px;
+    width: 25px;
+    height: 23px;
     background-image: url(../img/checkbox-off.svg);
-    background-position: 0 0;
     background-repeat: no-repeat;
     opacity: 0.4;
 }
 
 .filter-input-checkbox:checked + label::before{
-    display: none;
-}
-
-.filter-input-checkbox:checked + label::after{
-    content: "";
-    position: absolute;
-    top: -3px;
-    left: 0;
-    width: 27px;
-    height: 26px;
-    background: url(../img/checkbox-on.svg);    
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    opacity: 0.4;
+    background-image: url(../img/checkbox-on.svg);    
 }
 
 .filter-input-radio:hover + label::before{
@@ -885,15 +883,13 @@ th sup{
     background-color: var(--special-radio-button-hover-color);
 }
 
-.filter-input-checkbox:hover + label::before,
-.filter-input-checkbox:hover + label::after{
+.filter-input-checkbox:hover + label::before{
     opacity: 1;
 }
 
 .filter-input-radio:disabled + label::before,
 .filter-input-radio:disabled + label::after,
-.filter-input-checkbox:disabled + label::before,
-.filter-input-checkbox:disabled + label::after{
+.filter-input-checkbox:disabled + label::before{
     opacity: 0.1;
 }
 
@@ -918,41 +914,38 @@ th sup{
 }
 
 .pagination-item a{
-    display: inline-block;
-    text-align: center;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    min-height: 50px;
+    min-width: 50px;
+    box-sizing: border-box;
     font-weight: 500;
     font-size: 16px;
     line-height: 18px;
     color: var(--basic-black);
     text-transform: uppercase;
-    padding: 17px 20px 15px 20px;
-    border-radius: 3px;
+    padding: 4px 3px;
     background-color: var(--basic-grey);
-    border-width: 3px;
-    border-style: solid;
-    border-color: var(--basic-grey);
 }
 
 .pagination-item a:not(.active):hover{
     background-color: var(--basic-dark-grey);
-    border-color: var(--basic-dark-grey);
 }
 
 .pagination-item a:not(.active):active{
     background-color: var(--basic-extra-grey);
-    border-color: var(--basic-dark-grey);
     box-shadow: inset 0 3px 0 var(--special-black-opacity);
     color: var(--special-black-opacity-30);
 }
 
 .pagination-item .active{
     background-color: transparent;
-    border-color: var(--special-pagination-border);
+    border: 2px solid var(--special-pagination-border);
 }
 
 .pagination-item:last-child a{
-    padding-right: 78px;
-    padding-left: 78px; 
+   min-width: 260px; 
 }
 
 .catalog-list{
@@ -968,6 +961,7 @@ th sup{
     height: 619px;
     box-sizing: border-box;
     border-radius: 5px;
+    overflow: hidden;
     border: 1px solid var(--special-black-opacity);
 }
 
@@ -1002,7 +996,6 @@ th sup{
     width: 100%;
     max-height: 80%;
     box-sizing: border-box;
-    border-radius: 3px;
     background-color: var(--basic-grey);
     padding: 26px 53px 44px 53px;
     text-align: center;
@@ -1019,6 +1012,13 @@ th sup{
     margin: 0;
     margin-bottom: 12px;
     padding: 0;
+}
+
+.product-info-title a{
+    font-size: inherit;
+    color: inherit;
+    line-height: inherit;
+    font-weight: inherit;
 }
 
 .product-info-title a:hover{
