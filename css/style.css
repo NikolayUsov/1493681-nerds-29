@@ -99,7 +99,7 @@ img{
 .btn{
     display: inline-block;
     text-align: center;
-    padding: 17px 44px 15px;
+    padding: 19px 44px 19px 44px;
     border-radius: 3px;
     color: var(--basic-white);
     border: none;
@@ -108,6 +108,10 @@ img{
     line-height: 18px;
     text-transform: uppercase;
     font-family: inherit;
+}
+
+.promo-text .btn{
+    padding: 18px 54px 15px 54px;
 }
 
 .btn-primary{
@@ -183,6 +187,7 @@ img{
 .main-header .main-nav{
     list-style: none;
     margin: 0;
+    margin-top: 15px;
     padding: 0;
 }
 
@@ -223,6 +228,7 @@ img{
     display: inline-block;
     position: relative;
     padding-left: 25px;
+    margin-top: 15px;
 }
 
 .cart::before{
@@ -233,7 +239,7 @@ img{
     background-position: center center;
     background-repeat: no-repeat;
     position: absolute;
-    top: 8px;
+    top: 6px;
     left: -15px;
 }
 
@@ -246,7 +252,7 @@ img{
 
 .main-nav{
     display: flex;
-    justify-content: flex-start;
+    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -265,7 +271,7 @@ img{
 .header-logo:active .nerds-logo{
     fill: var(--logo-active-color);
 }
-.cart{
+.cart{ 
     margin-left: auto;
 }
 
@@ -276,7 +282,7 @@ img{
     padding:0;
 }
 
-.promo-title{
+.promo .promo-title{
     font-weight: 500;
     font-size: 55px;
     line-height: 55px;
@@ -289,7 +295,7 @@ img{
 .slide1,
 .slide3{
     display: grid;
-    grid-template-columns: 400px 760px;
+    grid-template-columns: 404px 749px;
     width: inherit;
 }
 
@@ -320,7 +326,7 @@ img{
 
 .promo-text{
     order: -1;
-    padding: 25px 0 0 0;
+    padding: 72px 0 15px 0;
 }
 
 .promo p{
@@ -330,7 +336,7 @@ img{
 .slider{
     position: relative;
     width: 100%;
-    min-height: 431px;
+    min-height: 424px;
 }
 
 .slide{
@@ -382,7 +388,7 @@ img{
 
 .service-list-item img{
     width: 100%;
-    margin: 0 0 25px 0;
+    margin: 0 0 18px 0;
 }
 
 /* service-grid */
@@ -927,6 +933,7 @@ th sup{
     text-transform: uppercase;
     padding: 4px 3px;
     background-color: var(--basic-grey);
+    border-radius: 3px;
 }
 
 .pagination-item a:not(.active):hover{
@@ -941,7 +948,7 @@ th sup{
 
 .pagination-item .active{
     background-color: transparent;
-    border: 2px solid var(--special-pagination-border);
+    border: 3px solid var(--special-pagination-border);
 }
 
 .pagination-item:last-child a{
