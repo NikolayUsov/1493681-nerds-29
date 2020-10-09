@@ -34,6 +34,11 @@
   --special-radio-button-normal-color: rgba(77, 77, 77, 0.4);
   --special-radio-button-hover-color:  rgba(77, 77, 77, 1);
   --special-radio-button-disabled-color: rgba(77, 77, 77, 0.1);
+  --special-range-color: #f1f1f1;
+  --special-range-scale: #d7dcde;
+  --special-range-progress-color: #00ca74;
+  --special-range-toggle: #ababab;
+  --special-range-toggle-shadow: #cfcfcf;
 }
 
 /* Basic-style */
@@ -112,6 +117,22 @@ img{
 
 .promo-text .btn{
     padding: 18px 54px 15px 54px;
+}
+
+.footer-contacts .btn{
+    padding: 17px 44px 15px 44px;
+}
+
+.service-list-item .btn{
+    padding: 16px 40px;
+}
+
+.filter-form .btn{
+    padding: 18px 89px;
+}
+
+.product-info .btn{
+    padding: 16px 75px;
 }
 
 .btn-primary{
@@ -384,6 +405,7 @@ img{
 
 .service-list-item p{
     margin: 0 0 32px 0;
+    padding-right: 19px;
 }
 
 .service-list-item img{
@@ -408,7 +430,7 @@ img{
 }
 
 .about-us{
-    padding: 39px 0 73px 0;
+    padding: 40px 0 68px 0;
     border-bottom: 1px solid var(--basic-grey) ;
     border-top: 1px solid var(--basic-grey) ;
 }
@@ -424,7 +446,11 @@ img{
     font-weight: bold;
     text-transform: uppercase;
     color: var(--basic-black);
-    margin-bottom: 24px;
+    margin-bottom: 23px;
+}
+
+.about-us-static .about-us-subtitle{
+    padding-left: 17px;
 }
 
 .product-list{
@@ -435,11 +461,12 @@ img{
 
 .stats{
     border: none;
+    width: 100%;
 }
 
 .product-list .product-list-item{
     position: relative;
-    margin-bottom: 33px;
+    margin-bottom: 24px;
 }
 
 .product-list .product-list-item:last-child{
@@ -463,6 +490,13 @@ img{
     line-height: 64px;
     text-align: left;
     font-weight: bold;
+    padding: 4px 0px;
+    width: 120px;
+}
+
+.stats td{
+    line-height: 18px;
+    padding: 7px 0px;
 }
 
 th sup{
@@ -470,10 +504,6 @@ th sup{
     font-size: 26px;
     line-height: 40px;
     color: inherit;
-}
-
-.static td{
-    line-height: 18px;
 }
 
 /* about-us-grid */
@@ -503,7 +533,7 @@ th sup{
 }
 
 .about-us-static{
-    padding: 37px 0 0 0;
+    padding: 30px 0 0 0;
 }
 
 /* our-clients-style */
@@ -593,7 +623,7 @@ th sup{
     font-weight: normal;
     font-size: 16px;
     line-height: 18px; 
-    margin: 0 0 21px 0;
+    margin: 0 0 35px 0;
 }
 
 .footer-social-title{
@@ -612,7 +642,7 @@ th sup{
     font-size: 16px;
     line-height: 22px;
     color: var(--basic-light-dark);
-    padding: 68px 0;
+    padding: 65px 0;
 }
 
 .social-links{
@@ -811,7 +841,7 @@ th sup{
 .filter-form fieldset{
     border: none;
     padding: 0;
-    margin: 0 0 46px 0;
+    margin: 0 0 49px 0;
 }
 
 .filter-form legend{
@@ -820,6 +850,7 @@ th sup{
     line-height: 30px;
     color: var(--basic-black);
     margin-bottom: 16px;
+    text-transform: uppercase;
 }
 
 .filter-form .price-legend{
@@ -900,7 +931,7 @@ th sup{
 }
 
 .filter-option:not(:last-child){
-    margin-bottom: 30px;
+    margin-bottom: 21px;
 }
 
 .pagination{
@@ -959,7 +990,7 @@ th sup{
     list-style: none;
     padding: 0;
     margin: 0;
-    margin-bottom: 54px;
+    margin-bottom: 55px;
 }
 
 .catalog-item{
@@ -1004,7 +1035,7 @@ th sup{
     max-height: 80%;
     box-sizing: border-box;
     background-color: var(--basic-grey);
-    padding: 26px 53px 44px 53px;
+    padding: 14px 63px 44px 65px;
     text-align: center;
     overflow-y: auto;
     opacity: 0;
@@ -1019,6 +1050,7 @@ th sup{
     margin: 0;
     margin-bottom: 12px;
     padding: 0;
+    text-transform: uppercase;
 }
 
 .product-info-title a{
@@ -1085,6 +1117,7 @@ th sup{
     font-size: 18px;
     line-height: 30px;
     margin: 0;
+    text-transform: uppercase;
 }
 
 .close-btn{
@@ -1112,11 +1145,11 @@ th sup{
 .range-filter{
     width: 260px;
   }
-  
+ 
 .range-controls{
     position: relative;
     height: 41px;
-    background-color: #f1f1f1;
+    background-color: var(--special-range-color);
     border-radius: 5px;
     margin-bottom: 15px;
     padding-top: 39px;
@@ -1126,26 +1159,26 @@ th sup{
 
   .range-controls .scale{
     height: 2px;
-    background: #d7dcde;
+    background-color: var(--special-range-scale);
   }
 
   .range-controls .bar{
     width: 70%;
     height: 2px;
-    background: #00ca74;
+    background: var(--special-range-progress-color);
   }
 
   .range-controls .toggle{
     position: absolute;
     top: 31px;
     left: 0; 
-    width: 4px;
-    height: 4px;
+    width: 16px;
+    height: 16px;
     padding: 0;
-    border: 8px solid #ffffff;
-    background-color: #ababab;
+    border: 7px solid var(--basic-white);
+    background-color: var( --special-range-toggle);
     border-radius: 50%;
-    box-shadow: 0 2px 1px 0 #cfcfcf;
+    box-shadow: 0 2px 1px 0 var( --special-range-toggle-shadow);
     cursor: pointer;
   }
 
@@ -1158,7 +1191,7 @@ th sup{
   }
 
   .price-controls{
-      width: 260px;
+    width: 260px;
     display: flex;
     justify-content: space-between;
   }
