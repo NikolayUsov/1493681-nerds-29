@@ -229,6 +229,12 @@ img{
     color: var(--special-red);
 }
 
+.cart:focus,
+.main-nav-item a:focus{
+    color: var(--special-red);
+    outline: none;  
+}
+
 .main-nav-item{
     position: relative;
 }
@@ -612,6 +618,7 @@ th sup{
 .map iframe{
     height: 100%;
     width: 100%;
+    border: none;
 
 }
 
@@ -690,11 +697,15 @@ th sup{
     width: 81px;
     height: 81px;
     border-radius:50%;
-    font-size: 0;
     background-color: var(--special-social--inactive);
 }
 
 .social-btn:hover{
+    background-color: var(--special-dark-red);
+}
+
+.social-btn:focus{
+    outline: none;
     background-color: var(--special-dark-red);
 }
 
@@ -1015,6 +1026,7 @@ th sup{
 .pagination-item .active{
     background-color: transparent;
     border: 3px solid var(--special-pagination-border);
+    cursor: default;
 }
 
 .pagination-item:last-child a{
