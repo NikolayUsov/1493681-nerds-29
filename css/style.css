@@ -13,7 +13,7 @@
   --basic-white: #ffffff;
   --special-black-opacity:rgba(0, 1, 1, 0.1);
   --special-black-opacity-25:rgba(0, 1, 1, 0.25);
-  --special-black-opacity-30: rgba(0, 0, 0, 0.3);
+  --special-black-opacity-30: rgba(102, 61, 61, 0.3);
   --special-black-opacity-60: rgba(0, 0, 0, 0.6);
   --special-white-opacity: rgba(255,255,255, 0.3);
   --special-color-for-icon-sort: #231F20;
@@ -144,6 +144,7 @@ img{
 }
 
 .btn-primary:active{
+    outline: none;
     background-color: var(--special-extra-red);
     box-shadow: inset 0 3px 0 var(--special-black-opacity);
     color: var(--special-white-opacity)
@@ -177,6 +178,7 @@ img{
 }
 
 .btn-order-app:active{
+    outline: none;
     background-color: var(--special-extra-green);
     box-shadow: inset 0 3px 0 var(--special-black-opacity);
     color: var(--special-white-opacity)
@@ -191,6 +193,7 @@ img{
 }
 
 .btn-order-presentation:active{
+    outline: none;
     background-color: var(--special-extra-yellow);
     box-shadow: inset 0 3px 0 var(--special-black-opacity);
     color: var(--special-white-opacity)
@@ -490,13 +493,13 @@ img{
     line-height: 64px;
     text-align: left;
     font-weight: bold;
-    padding: 4px 0px;
+    padding: 4px 3px;
     width: 120px;
 }
 
 .stats td{
     line-height: 18px;
-    padding: 7px 0px;
+    padding: 7px 3px;
 }
 
 th sup{
@@ -589,11 +592,34 @@ th sup{
 /* footer-contacts-style */
 
 .footer-map{
+    position: relative;
     padding: 54px 0;
     background-color: #B4B9BB;
     background-image: url(../img/map.png);
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.map{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.map iframe{
+    height: 100%;
+    width: 100%;
+
+}
+
+.wrapper-map{
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 50;
 }
 
 .footer-contacts{
@@ -912,15 +938,18 @@ th sup{
     background-image: url(../img/checkbox-on.svg);    
 }
 
-.filter-input-radio:hover + label::before{
+.filter-input-radio:hover + label::before,
+.filter-input-radio:focus + label::before{
     border-color: var(--special-radio-button-hover-color);
 }
 
-.filter-input-radio:hover + label::after{
+.filter-input-radio:hover + label::after,
+.filter-input-radio:focus + label::after{
     background-color: var(--special-radio-button-hover-color);
 }
 
-.filter-input-checkbox:hover + label::before{
+.filter-input-checkbox:hover + label::before,
+.filter-input-checkbox:focus + label::before{
     opacity: 1;
 }
 
@@ -928,6 +957,11 @@ th sup{
 .filter-input-radio:disabled + label::after,
 .filter-input-checkbox:disabled + label::before{
     opacity: 0.1;
+}
+
+.filter-input-checkbox:disabled + label,
+.filter-input-radio:disabled + label{
+    opacity: 0.3;
 }
 
 .filter-option:not(:last-child){
@@ -1015,11 +1049,13 @@ th sup{
     box-shadow: 0px 6px 15px var( --special-black-opacity-25);
 }
 
-.catalog-item:hover .catalog-item-browser{
+.catalog-item:hover .catalog-item-browser,
+.catalog-item:focus-within .catalog-item-browser{
     fill-opacity: 1;
 }
 
-.catalog-item:hover .product-info{
+.catalog-item:hover .product-info,
+.catalog-item:focus-within .product-info{
     opacity: 1;
 } 
 
@@ -1127,7 +1163,6 @@ th sup{
     width: 21px;
     height: 21px;
     background-color: transparent;
-    font-size: 0;
     opacity: 0.3;
     background:url(../img/close-cross.svg) no-repeat center center;
 }
