@@ -804,6 +804,7 @@ th sup{
 
 .form-group input[type="email"]:invalid{
     border-color: var(--special-dark-red);
+    color: var(--special-dark-red);
 }
 
 /* сетка каталога */
