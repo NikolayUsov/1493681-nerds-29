@@ -645,7 +645,7 @@ th sup {
 .footer-map {
   position: relative;
   padding: 54px 0;
-  background-color: #b4b9bb;
+  background-color: var(--basic-extra-grey);
   background-image: url(../img/map.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -755,7 +755,7 @@ th sup {
 
 .social-btn:active {
   background-color: var(--special-extra-red);
-  box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+  box-shadow: inset 0 3px 0 var(--special-black-opacity);
 }
 
 .social-btn:active svg {
