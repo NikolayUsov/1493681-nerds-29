@@ -62,8 +62,6 @@ window.addEventListener("keydown", function (evt) {
       modal.classList.remove("modal-error");
     }
   }
-
-
 });
 
 sliderDot_1.addEventListener("click",function(evt) {
