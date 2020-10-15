@@ -5,6 +5,9 @@ const modalNameInput = document.querySelector(".modal-name-input");
 const modalEmailInput = document.querySelector(".modal-email");
 const loginForm = document.querySelector(".login-form");
 const textAreaInput = document.querySelector(".modal-text-area");
+const sliderDot_1 = document.querySelector(".sd-1");
+const sliderDot_2 = document.querySelector(".sd-2");
+const sliderDot_3 = document.querySelector(".sd-3");
 
 let isStorageSupport = true;
 let storage = "";
@@ -59,4 +62,27 @@ window.addEventListener("keydown", function (evt) {
       modal.classList.remove("modal-error");
     }
   }
+
+
+});
+
+sliderDot_1.addEventListener("click",function(evt) {
+  evt.preventDefault();
+  sliderDot_2.classList.remove("active-dot");
+  sliderDot_3.classList.remove("active-dot");
+  sliderDot_1.classList.add("active-dot");
+});
+
+sliderDot_2.addEventListener("click",function(evt) {
+  evt.preventDefault();
+  sliderDot_1.classList.remove("active-dot");
+  sliderDot_3.classList.remove("active-dot");
+  sliderDot_2.classList.add("active-dot");
+});
+
+sliderDot_3.addEventListener("click",function(evt) {
+  evt.preventDefault();
+  sliderDot_2.classList.remove("active-dot");
+  sliderDot_1.classList.remove("active-dot");
+  sliderDot_3.classList.add("active-dot");
 });
