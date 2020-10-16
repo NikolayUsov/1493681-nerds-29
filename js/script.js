@@ -5,9 +5,9 @@ const modalNameInput = document.querySelector(".modal-name-input");
 const modalEmailInput = document.querySelector(".modal-email");
 const loginForm = document.querySelector(".login-form");
 const textAreaInput = document.querySelector(".modal-text-area");
-const sliderDot_1 = document.querySelector(".sd-1");
-const sliderDot_2 = document.querySelector(".sd-2");
-const sliderDot_3 = document.querySelector(".sd-3");
+const sliderDot_1 = document.querySelector(".slider-dot-1");
+const sliderDot_2 = document.querySelector(".slider-dot-2");
+const sliderDot_3 = document.querySelector(".slider-dot-3");
 
 let isStorageSupport = true;
 let storage = "";

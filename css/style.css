@@ -70,7 +70,8 @@ a {
   text-decoration: none;
 }
 
-button {
+.close-btn,
+.slider-dots {
   border: none;
 }
 
@@ -103,7 +104,7 @@ img {
 /* style-btn and btn-active */
 
 .btn {
-  display: inline-block;
+  display: inline-flex;
   text-align: center;
   padding: 19px 44px 19px 44px;
   border-radius: 3px;
@@ -260,7 +261,7 @@ img {
 }
 
 .cart {
-  display: inline-block;
+  display: inline-flex;
   position: relative;
   padding-left: 25px;
   margin-top: 15px;
@@ -347,7 +348,7 @@ img {
   display: none;
 }
 
- .active-dot.slider-dot::before {
+ .active-dot.slider-dots::before {
   position: absolute;
   content: "";
   top: 50%;
@@ -359,13 +360,12 @@ img {
   border-radius: 50%;
 }
 
-.slider-dot {
+.slider-dots {
   position: relative;
   width: 18px;
   height: 18px;
   background-color: var(--basic-white);
   border-radius: 50px;
-  outline: none;
 }
 
 .slide1,
@@ -553,7 +553,7 @@ img {
   padding: 7px 3px;
 }
 
-th sup {
+.table-head sup {
   font-weight: bold;
   font-size: 26px;
   line-height: 40px;
@@ -687,14 +687,14 @@ th sup {
   margin: 0 0 22px 0;
 }
 
-.footer-contacts .footer-addres {
+.footer-contacts .footer-address {
   line-height: 18px;
   color: var(--basic-black-darken);
   margin: 0 0 16px 0;
 }
 
 .footer-contacts .footer-phone-number {
-  display: inline-block;
+  display: inline-flex;
   color: var(--basic-black-darken);
   font-family: inherit;
   font-weight: normal;
@@ -1026,7 +1026,7 @@ th sup {
 .filter-input-radio:disabled+label::before,
 .filter-input-radio:disabled+label::after,
 .filter-input-checkbox:disabled+label::before {
-  opacity: 0.1;
+  opacity: 0.3;
 }
 
 .filter-input-checkbox:disabled+label,
@@ -1319,6 +1319,18 @@ th sup {
   background: var(--special-range-color);
   font-family: inherit;
   font-size: inherit;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 @keyframes shake {

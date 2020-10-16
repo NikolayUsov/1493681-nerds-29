@@ -6,7 +6,7 @@
   <title>HTML Academy: Нёрдс</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="page-body">
@@ -43,7 +43,7 @@
         <div class="slider">
           <div class="slide slide1 active-slide">
             <div class="promo-logo">
-              <img src="img/nerds-index-slide1-1.png" width="760" height="431" alt="Промологотип">
+              <img src="img/nerds-index-slide1-1.png" width="760" height="431" alt="Промологотип главный">
             </div>
             <div class="promo-text">
               <h2 class="visually-hidden">Описание студии Nerds</h2>
@@ -55,7 +55,7 @@
           </div>
           <div class="slide slide2">
             <div class="promo-logo">
-              <img src="img/nerds-index-slide2-1.png" width="760" height="431" alt="">
+              <img src="img/nerds-index-slide2-1.png" width="760" height="431" alt="Промологотип веб-сайтов">
             </div>
             <div class="promo-text">
               <p class="promo-title">Любим математику как никто другой.</p>
@@ -65,7 +65,7 @@
           </div>
           <div class="slide slide3">
             <div class="promo-logo">
-              <img src="img/nerds-index-slide3-1.png" width="760" height="431" alt="">
+              <img src="img/nerds-index-slide3-1.png" width="760" height="431" alt=" Промологотип мобильных приложений">
             </div>
             <div class="promo-text">
               <p class="promo-title">Только ночь, только хардкор</p>
@@ -76,13 +76,13 @@
           </div>
           <ul class="slider-control">
             <li class="slider-control-item">
-              <button class="slider-dot sd-1 active-dot slider-index-1" type="button" aria-label="Переключение на первый слайд"></button>
+              <button class="slider-dots slider-dot-1 active-dot slider-index-1" type="button" aria-label="Переключение на первый слайд"></button>
             </li>
             <li class="slider-control-item">
-              <button class="slider-dot sd-2 slider-index-2"  type="button" aria-label="Переключение на второй слайд"></button>
+              <button class="slider-dots slider-dot-2 slider-index-2"  type="button" aria-label="Переключение на второй слайд"></button>
             </li>
             <li class="slider-control-item">
-              <button class="slider-dot sd-3 slider-index-3" type="button" aria-label="Переключение на третий слайд"></button>
+              <button class="slider-dots slider-dot-3 slider-index-3" type="button" aria-label="Переключение на третий слайд"></button>
             </li>
 
           </ul>
@@ -97,19 +97,19 @@
           <img src="img/web-site.png" width="300" height="146" alt="Дизайн веб сайтов">
           <h3 class="service-title">Веб-сайты</h3>
           <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-          <button class="btn btn-primary">Заказать</button>
+          <a href="#" class="btn btn-primary">Заказать</a>
         </li>
         <li class="service-list-item">
           <img src="img/app.png" width="300" height="146" alt="Мобильные приложения">
           <h3 class="service-title">Приложения</h3>
           <p>Покорите топ-10 приложений в AppStore и Google Play</p>
-          <button class="btn btn-order-app">Заказать</button>
+          <a href="#" class="btn btn-order-app">Заказать</a>
         </li>
         <li class="service-list-item">
           <img src="img/presentation.png" width="300" height="146" alt="Презентации">
           <h3 class="service-title">Презентации</h3>
           <p>Вы даже не подозреваете, насколько вы изумительны!</p>
-          <button class="btn btn-order-presentation">Заказать</button>
+          <a href="#" class="btn btn-order-presentation">Заказать</a>
         </li>
       </ul>
     </section>
@@ -139,9 +139,9 @@
           <p class="about-us-subtitle">С 2004 года Любим точность во всем:</p>
           <table class="stats">
             <tr>
-              <th>146<sup>%</sup></th>
-              <th>100<sup>%</sup></th>
-              <th>50<sup>%</sup></th>
+              <th class="table-head">146<sup>%</sup></th>
+              <th class="table-head">100<sup>%</sup></th>
+              <th class="table-head">50<sup>%</sup></th>
             </tr>
             <tr>
               <td>Уровень самоотдачи</td>
@@ -191,10 +191,10 @@
         <section class="footer-contacts">
           <h2 class="visually-hidden">Контакты дизайн-студии Nerds</h2>
           <h3 class="footer-title">NЁRDS DESIGN STUDIO</h3>
-          <p class="footer-addres">191186, Санкт-Петербург,<br>
+          <p class="footer-address">191186, Санкт-Петербург,<br>
             ул. Б. Конюшенная, д. 19/8</p>
           <a class="footer-phone-number" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
-          <button class="btn btn-primary open-modal-btn">Напишите нам</button>
+          <a href="#" class="btn btn-primary open-modal-btn">Напишите нам</a>
         </section>
       </div>
     </div>
@@ -255,6 +255,7 @@
     </form>
     <button type="button" class="close-btn" aria-label="close"><span class="visually-hidden">Закрыть</span></button>
   </section>
+  <script src="js/script.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 
